@@ -22,6 +22,7 @@
 		D9E870DD18E9F85B00CF64F7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E870C118E9F85A00CF64F7 /* CoreData.framework */; };
 		D9E870E518E9F85B00CF64F7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D9E870E318E9F85B00CF64F7 /* InfoPlist.strings */; };
 		D9E870E718E9F85B00CF64F7 /* DriveLATests.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E870E618E9F85B00CF64F7 /* DriveLATests.m */; };
+		D9E870F118E9FBD400CF64F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9E870F018E9FBD400CF64F7 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		D9E870E218E9F85B00CF64F7 /* DriveLATests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DriveLATests-Info.plist"; sourceTree = "<group>"; };
 		D9E870E418E9F85B00CF64F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D9E870E618E9F85B00CF64F7 /* DriveLATests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DriveLATests.m; sourceTree = "<group>"; };
+		D9E870F018E9FBD400CF64F7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		D9E870C318E9F85A00CF64F7 /* DriveLA */ = {
 			isa = PBXGroup;
 			children = (
+				D9E870F018E9FBD400CF64F7 /* Main.storyboard */,
 				D9E870CC18E9F85B00CF64F7 /* DLAAppDelegate.h */,
 				D9E870CD18E9F85B00CF64F7 /* DLAAppDelegate.m */,
 				D9E870D218E9F85B00CF64F7 /* Images.xcassets */,
@@ -229,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9E870F118E9FBD400CF64F7 /* Main.storyboard in Resources */,
 				D9E870C818E9F85B00CF64F7 /* InfoPlist.strings in Resources */,
 				D9E870D318E9F85B00CF64F7 /* Images.xcassets in Resources */,
 			);
