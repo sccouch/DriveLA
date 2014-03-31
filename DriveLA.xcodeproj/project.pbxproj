@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D9E870BC18E9F85A00CF64F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E870BB18E9F85A00CF64F7 /* Foundation.framework */; };
+		D9E870BE18E9F85A00CF64F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E870BD18E9F85A00CF64F7 /* CoreGraphics.framework */; };
+		D9E870C018E9F85A00CF64F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E870BF18E9F85A00CF64F7 /* UIKit.framework */; };
+		D9E870C218E9F85A00CF64F7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E870C118E9F85A00CF64F7 /* CoreData.framework */; };
+		D9E870C818E9F85B00CF64F7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D9E870C618E9F85B00CF64F7 /* InfoPlist.strings */; };
+		D9E870CA18E9F85B00CF64F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E870C918E9F85B00CF64F7 /* main.m */; };
+		D9E870CE18E9F85B00CF64F7 /* DLAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E870CD18E9F85B00CF64F7 /* DLAAppDelegate.m */; };
+		D9E870D118E9F85B00CF64F7 /* DriveLA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9E870CF18E9F85B00CF64F7 /* DriveLA.xcdatamodeld */; };
+		D9E870D318E9F85B00CF64F7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9E870D218E9F85B00CF64F7 /* Images.xcassets */; };
+		D9E870DA18E9F85B00CF64F7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E870D918E9F85B00CF64F7 /* XCTest.framework */; };
+		D9E870DB18E9F85B00CF64F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E870BB18E9F85A00CF64F7 /* Foundation.framework */; };
+		D9E870DC18E9F85B00CF64F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E870BF18E9F85A00CF64F7 /* UIKit.framework */; };
+		D9E870DD18E9F85B00CF64F7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E870C118E9F85A00CF64F7 /* CoreData.framework */; };
+		D9E870E518E9F85B00CF64F7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D9E870E318E9F85B00CF64F7 /* InfoPlist.strings */; };
+		D9E870E718E9F85B00CF64F7 /* DriveLATests.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E870E618E9F85B00CF64F7 /* DriveLATests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D9E870DE18E9F85B00CF64F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9E870B018E9F85A00CF64F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9E870B718E9F85A00CF64F7;
+			remoteInfo = DriveLA;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D9E870B818E9F85A00CF64F7 /* DriveLA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveLA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9E870BB18E9F85A00CF64F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D9E870BD18E9F85A00CF64F7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D9E870BF18E9F85A00CF64F7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D9E870C118E9F85A00CF64F7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D9E870C518E9F85B00CF64F7 /* DriveLA-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DriveLA-Info.plist"; sourceTree = "<group>"; };
+		D9E870C718E9F85B00CF64F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D9E870C918E9F85B00CF64F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D9E870CB18E9F85B00CF64F7 /* DriveLA-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DriveLA-Prefix.pch"; sourceTree = "<group>"; };
+		D9E870CC18E9F85B00CF64F7 /* DLAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAAppDelegate.h; sourceTree = "<group>"; };
+		D9E870CD18E9F85B00CF64F7 /* DLAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAAppDelegate.m; sourceTree = "<group>"; };
+		D9E870D018E9F85B00CF64F7 /* DriveLA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DriveLA.xcdatamodel; sourceTree = "<group>"; };
+		D9E870D218E9F85B00CF64F7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D9E870D818E9F85B00CF64F7 /* DriveLATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriveLATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9E870D918E9F85B00CF64F7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D9E870E218E9F85B00CF64F7 /* DriveLATests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DriveLATests-Info.plist"; sourceTree = "<group>"; };
+		D9E870E418E9F85B00CF64F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D9E870E618E9F85B00CF64F7 /* DriveLATests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DriveLATests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D9E870B518E9F85A00CF64F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9E870BE18E9F85A00CF64F7 /* CoreGraphics.framework in Frameworks */,
+				D9E870C218E9F85A00CF64F7 /* CoreData.framework in Frameworks */,
+				D9E870C018E9F85A00CF64F7 /* UIKit.framework in Frameworks */,
+				D9E870BC18E9F85A00CF64F7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9E870D518E9F85B00CF64F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9E870DA18E9F85B00CF64F7 /* XCTest.framework in Frameworks */,
+				D9E870DD18E9F85B00CF64F7 /* CoreData.framework in Frameworks */,
+				D9E870DC18E9F85B00CF64F7 /* UIKit.framework in Frameworks */,
+				D9E870DB18E9F85B00CF64F7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D9E870AF18E9F85A00CF64F7 = {
+			isa = PBXGroup;
+			children = (
+				D9E870C318E9F85A00CF64F7 /* DriveLA */,
+				D9E870E018E9F85B00CF64F7 /* DriveLATests */,
+				D9E870BA18E9F85A00CF64F7 /* Frameworks */,
+				D9E870B918E9F85A00CF64F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D9E870B918E9F85A00CF64F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9E870B818E9F85A00CF64F7 /* DriveLA.app */,
+				D9E870D818E9F85B00CF64F7 /* DriveLATests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D9E870BA18E9F85A00CF64F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9E870BB18E9F85A00CF64F7 /* Foundation.framework */,
+				D9E870BD18E9F85A00CF64F7 /* CoreGraphics.framework */,
+				D9E870BF18E9F85A00CF64F7 /* UIKit.framework */,
+				D9E870C118E9F85A00CF64F7 /* CoreData.framework */,
+				D9E870D918E9F85B00CF64F7 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D9E870C318E9F85A00CF64F7 /* DriveLA */ = {
+			isa = PBXGroup;
+			children = (
+				D9E870CC18E9F85B00CF64F7 /* DLAAppDelegate.h */,
+				D9E870CD18E9F85B00CF64F7 /* DLAAppDelegate.m */,
+				D9E870D218E9F85B00CF64F7 /* Images.xcassets */,
+				D9E870CF18E9F85B00CF64F7 /* DriveLA.xcdatamodeld */,
+				D9E870C418E9F85B00CF64F7 /* Supporting Files */,
+			);
+			path = DriveLA;
+			sourceTree = "<group>";
+		};
+		D9E870C418E9F85B00CF64F7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D9E870C518E9F85B00CF64F7 /* DriveLA-Info.plist */,
+				D9E870C618E9F85B00CF64F7 /* InfoPlist.strings */,
+				D9E870C918E9F85B00CF64F7 /* main.m */,
+				D9E870CB18E9F85B00CF64F7 /* DriveLA-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D9E870E018E9F85B00CF64F7 /* DriveLATests */ = {
+			isa = PBXGroup;
+			children = (
+				D9E870E618E9F85B00CF64F7 /* DriveLATests.m */,
+				D9E870E118E9F85B00CF64F7 /* Supporting Files */,
+			);
+			path = DriveLATests;
+			sourceTree = "<group>";
+		};
+		D9E870E118E9F85B00CF64F7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D9E870E218E9F85B00CF64F7 /* DriveLATests-Info.plist */,
+				D9E870E318E9F85B00CF64F7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D9E870B718E9F85A00CF64F7 /* DriveLA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9E870EA18E9F85B00CF64F7 /* Build configuration list for PBXNativeTarget "DriveLA" */;
+			buildPhases = (
+				D9E870B418E9F85A00CF64F7 /* Sources */,
+				D9E870B518E9F85A00CF64F7 /* Frameworks */,
+				D9E870B618E9F85A00CF64F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DriveLA;
+			productName = DriveLA;
+			productReference = D9E870B818E9F85A00CF64F7 /* DriveLA.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D9E870D718E9F85B00CF64F7 /* DriveLATests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9E870ED18E9F85B00CF64F7 /* Build configuration list for PBXNativeTarget "DriveLATests" */;
+			buildPhases = (
+				D9E870D418E9F85B00CF64F7 /* Sources */,
+				D9E870D518E9F85B00CF64F7 /* Frameworks */,
+				D9E870D618E9F85B00CF64F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9E870DF18E9F85B00CF64F7 /* PBXTargetDependency */,
+			);
+			name = DriveLATests;
+			productName = DriveLATests;
+			productReference = D9E870D818E9F85B00CF64F7 /* DriveLATests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D9E870B018E9F85A00CF64F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DLA;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = USC;
+				TargetAttributes = {
+					D9E870D718E9F85B00CF64F7 = {
+						TestTargetID = D9E870B718E9F85A00CF64F7;
+					};
+				};
+			};
+			buildConfigurationList = D9E870B318E9F85A00CF64F7 /* Build configuration list for PBXProject "DriveLA" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D9E870AF18E9F85A00CF64F7;
+			productRefGroup = D9E870B918E9F85A00CF64F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D9E870B718E9F85A00CF64F7 /* DriveLA */,
+				D9E870D718E9F85B00CF64F7 /* DriveLATests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D9E870B618E9F85A00CF64F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9E870C818E9F85B00CF64F7 /* InfoPlist.strings in Resources */,
+				D9E870D318E9F85B00CF64F7 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9E870D618E9F85B00CF64F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9E870E518E9F85B00CF64F7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D9E870B418E9F85A00CF64F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9E870CE18E9F85B00CF64F7 /* DLAAppDelegate.m in Sources */,
+				D9E870CA18E9F85B00CF64F7 /* main.m in Sources */,
+				D9E870D118E9F85B00CF64F7 /* DriveLA.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9E870D418E9F85B00CF64F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9E870E718E9F85B00CF64F7 /* DriveLATests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D9E870DF18E9F85B00CF64F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9E870B718E9F85A00CF64F7 /* DriveLA */;
+			targetProxy = D9E870DE18E9F85B00CF64F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D9E870C618E9F85B00CF64F7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9E870C718E9F85B00CF64F7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D9E870E318E9F85B00CF64F7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9E870E418E9F85B00CF64F7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D9E870E818E9F85B00CF64F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D9E870E918E9F85B00CF64F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D9E870EB18E9F85B00CF64F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DriveLA/DriveLA-Prefix.pch";
+				INFOPLIST_FILE = "DriveLA/DriveLA-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D9E870EC18E9F85B00CF64F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DriveLA/DriveLA-Prefix.pch";
+				INFOPLIST_FILE = "DriveLA/DriveLA-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D9E870EE18E9F85B00CF64F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DriveLA.app/DriveLA";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DriveLA/DriveLA-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DriveLATests/DriveLATests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D9E870EF18E9F85B00CF64F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DriveLA.app/DriveLA";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DriveLA/DriveLA-Prefix.pch";
+				INFOPLIST_FILE = "DriveLATests/DriveLATests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D9E870B318E9F85A00CF64F7 /* Build configuration list for PBXProject "DriveLA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9E870E818E9F85B00CF64F7 /* Debug */,
+				D9E870E918E9F85B00CF64F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9E870EA18E9F85B00CF64F7 /* Build configuration list for PBXNativeTarget "DriveLA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9E870EB18E9F85B00CF64F7 /* Debug */,
+				D9E870EC18E9F85B00CF64F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D9E870ED18E9F85B00CF64F7 /* Build configuration list for PBXNativeTarget "DriveLATests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9E870EE18E9F85B00CF64F7 /* Debug */,
+				D9E870EF18E9F85B00CF64F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D9E870CF18E9F85B00CF64F7 /* DriveLA.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D9E870D018E9F85B00CF64F7 /* DriveLA.xcdatamodel */,
+			);
+			currentVersion = D9E870D018E9F85B00CF64F7 /* DriveLA.xcdatamodel */;
+			path = DriveLA.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D9E870B018E9F85A00CF64F7 /* Project object */;
+}
