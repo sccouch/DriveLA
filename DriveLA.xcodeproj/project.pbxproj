@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0406227918ECABC600FA411C /* DLADriversLicenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406227818ECABC600FA411C /* DLADriversLicenseViewController.m */; };
+		04DFE31E18EA063100F8D5B4 /* DLAHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DFE31D18EA063100F8D5B4 /* DLAHomeViewController.m */; };
 		D9E870BC18E9F85A00CF64F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E870BB18E9F85A00CF64F7 /* Foundation.framework */; };
 		D9E870BE18E9F85A00CF64F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E870BD18E9F85A00CF64F7 /* CoreGraphics.framework */; };
 		D9E870C018E9F85A00CF64F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E870BF18E9F85A00CF64F7 /* UIKit.framework */; };
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0406227718ECABC600FA411C /* DLADriversLicenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLADriversLicenseViewController.h; sourceTree = "<group>"; };
+		0406227818ECABC600FA411C /* DLADriversLicenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLADriversLicenseViewController.m; sourceTree = "<group>"; };
+		04DFE31C18EA063100F8D5B4 /* DLAHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAHomeViewController.h; sourceTree = "<group>"; };
+		04DFE31D18EA063100F8D5B4 /* DLAHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAHomeViewController.m; sourceTree = "<group>"; };
 		D9E870B818E9F85A00CF64F7 /* DriveLA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveLA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9E870BB18E9F85A00CF64F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D9E870BD18E9F85A00CF64F7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,6 +89,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04DFE31B18E9FE7000F8D5B4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				04DFE31C18EA063100F8D5B4 /* DLAHomeViewController.h */,
+				04DFE31D18EA063100F8D5B4 /* DLAHomeViewController.m */,
+				0406227718ECABC600FA411C /* DLADriversLicenseViewController.h */,
+				0406227818ECABC600FA411C /* DLADriversLicenseViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		D9E870AF18E9F85A00CF64F7 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +134,7 @@
 		D9E870C318E9F85A00CF64F7 /* DriveLA */ = {
 			isa = PBXGroup;
 			children = (
+				04DFE31B18E9FE7000F8D5B4 /* Controllers */,
 				D9E870F018E9FBD400CF64F7 /* Main.storyboard */,
 				D9E870CC18E9F85B00CF64F7 /* DLAAppDelegate.h */,
 				D9E870CD18E9F85B00CF64F7 /* DLAAppDelegate.m */,
@@ -255,7 +273,9 @@
 			files = (
 				D9E870CE18E9F85B00CF64F7 /* DLAAppDelegate.m in Sources */,
 				D9E870CA18E9F85B00CF64F7 /* main.m in Sources */,
+				0406227918ECABC600FA411C /* DLADriversLicenseViewController.m in Sources */,
 				D9E870D118E9F85B00CF64F7 /* DriveLA.xcdatamodeld in Sources */,
+				04DFE31E18EA063100F8D5B4 /* DLAHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +472,7 @@
 				D9E870EC18E9F85B00CF64F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D9E870ED18E9F85B00CF64F7 /* Build configuration list for PBXNativeTarget "DriveLATests" */ = {
 			isa = XCConfigurationList;
@@ -460,6 +481,7 @@
 				D9E870EF18E9F85B00CF64F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
