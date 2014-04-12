@@ -1,8 +1,8 @@
 //
-//  DLADriversLicenseViewController.h
+//  DLAAddressInputViewController.h
 //  DriveLA
 //
-//  Created by Jack Okerman on 4/2/14.
+//  Created by Jack Okerman on 4/10/14.
 //  Copyright (c) 2014 USC. All rights reserved.
 //
 
@@ -10,6 +10,6 @@
 #import "DLACoreDataStore.h"
 #import "Driver.h"
 
-@interface DLADriversLicenseViewController : UITableViewController
+@interface DLAAddressInputViewController : UITableViewController
 
 @end

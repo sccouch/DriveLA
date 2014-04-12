@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0406227918ECABC600FA411C /* DLADriversLicenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406227818ECABC600FA411C /* DLADriversLicenseViewController.m */; };
+		04295FF218F63396005122CC /* DLANameInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04295FF118F63396005122CC /* DLANameInputViewController.m */; };
+		04295FF518F6673D005122CC /* DLAPhoneInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04295FF418F6673D005122CC /* DLAPhoneInputViewController.m */; };
+		0469CC6318F67A8E008B9691 /* DLAEmailInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0469CC6218F67A8E008B9691 /* DLAEmailInputViewController.m */; };
+		0469CC6718F67E6D008B9691 /* DLAAddressInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0469CC6618F67E6D008B9691 /* DLAAddressInputViewController.m */; };
+		04BC9B3D18F3377800E1A12D /* DLACoreDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BC9B3C18F3377800E1A12D /* DLACoreDataStore.m */; };
+		04D7E6AF18F932AF00A6781E /* Driver.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D7E6AE18F932AF00A6781E /* Driver.m */; };
 		04DFE31E18EA063100F8D5B4 /* DLAHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DFE31D18EA063100F8D5B4 /* DLAHomeViewController.m */; };
 		D9E870BC18E9F85A00CF64F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E870BB18E9F85A00CF64F7 /* Foundation.framework */; };
 		D9E870BE18E9F85A00CF64F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E870BD18E9F85A00CF64F7 /* CoreGraphics.framework */; };
@@ -40,6 +46,23 @@
 /* Begin PBXFileReference section */
 		0406227718ECABC600FA411C /* DLADriversLicenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLADriversLicenseViewController.h; sourceTree = "<group>"; };
 		0406227818ECABC600FA411C /* DLADriversLicenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLADriversLicenseViewController.m; sourceTree = "<group>"; };
+		04295FE918F5E1F7005122CC /* DriveLA 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DriveLA 3.xcdatamodel"; sourceTree = "<group>"; };
+		04295FF018F63396005122CC /* DLANameInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLANameInputViewController.h; sourceTree = "<group>"; };
+		04295FF118F63396005122CC /* DLANameInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLANameInputViewController.m; sourceTree = "<group>"; };
+		04295FF318F6673D005122CC /* DLAPhoneInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAPhoneInputViewController.h; sourceTree = "<group>"; };
+		04295FF418F6673D005122CC /* DLAPhoneInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAPhoneInputViewController.m; sourceTree = "<group>"; };
+		04295FF918F66BF5005122CC /* DriveLA 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DriveLA 4.xcdatamodel"; sourceTree = "<group>"; };
+		0469CC5A18F67844008B9691 /* DriveLA 5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DriveLA 5.xcdatamodel"; sourceTree = "<group>"; };
+		0469CC6118F67A8E008B9691 /* DLAEmailInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAEmailInputViewController.h; sourceTree = "<group>"; };
+		0469CC6218F67A8E008B9691 /* DLAEmailInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAEmailInputViewController.m; sourceTree = "<group>"; };
+		0469CC6518F67E6D008B9691 /* DLAAddressInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAAddressInputViewController.h; sourceTree = "<group>"; };
+		0469CC6618F67E6D008B9691 /* DLAAddressInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAAddressInputViewController.m; sourceTree = "<group>"; };
+		04BC9B3B18F3377800E1A12D /* DLACoreDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLACoreDataStore.h; sourceTree = "<group>"; };
+		04BC9B3C18F3377800E1A12D /* DLACoreDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLACoreDataStore.m; sourceTree = "<group>"; };
+		04BC9B3E18F33FB100E1A12D /* DriveLA 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DriveLA 2.xcdatamodel"; sourceTree = "<group>"; };
+		04D7E6AC18F931EE00A6781E /* DriveLA 6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DriveLA 6.xcdatamodel"; sourceTree = "<group>"; };
+		04D7E6AD18F932AF00A6781E /* Driver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Driver.h; sourceTree = "<group>"; };
+		04D7E6AE18F932AF00A6781E /* Driver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Driver.m; sourceTree = "<group>"; };
 		04DFE31C18EA063100F8D5B4 /* DLAHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAHomeViewController.h; sourceTree = "<group>"; };
 		04DFE31D18EA063100F8D5B4 /* DLAHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAHomeViewController.m; sourceTree = "<group>"; };
 		D9E870B818E9F85A00CF64F7 /* DriveLA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveLA.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,13 +112,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0469CC6418F67E01008B9691 /* DriversLicense */ = {
+			isa = PBXGroup;
+			children = (
+				0406227718ECABC600FA411C /* DLADriversLicenseViewController.h */,
+				0406227818ECABC600FA411C /* DLADriversLicenseViewController.m */,
+				04295FF018F63396005122CC /* DLANameInputViewController.h */,
+				04295FF118F63396005122CC /* DLANameInputViewController.m */,
+				04295FF318F6673D005122CC /* DLAPhoneInputViewController.h */,
+				04295FF418F6673D005122CC /* DLAPhoneInputViewController.m */,
+				0469CC6118F67A8E008B9691 /* DLAEmailInputViewController.h */,
+				0469CC6218F67A8E008B9691 /* DLAEmailInputViewController.m */,
+				0469CC6518F67E6D008B9691 /* DLAAddressInputViewController.h */,
+				0469CC6618F67E6D008B9691 /* DLAAddressInputViewController.m */,
+			);
+			name = DriversLicense;
+			sourceTree = "<group>";
+		};
 		04DFE31B18E9FE7000F8D5B4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0469CC6418F67E01008B9691 /* DriversLicense */,
 				04DFE31C18EA063100F8D5B4 /* DLAHomeViewController.h */,
 				04DFE31D18EA063100F8D5B4 /* DLAHomeViewController.m */,
-				0406227718ECABC600FA411C /* DLADriversLicenseViewController.h */,
-				0406227818ECABC600FA411C /* DLADriversLicenseViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -138,8 +177,12 @@
 				D9E870F018E9FBD400CF64F7 /* Main.storyboard */,
 				D9E870CC18E9F85B00CF64F7 /* DLAAppDelegate.h */,
 				D9E870CD18E9F85B00CF64F7 /* DLAAppDelegate.m */,
+				04BC9B3B18F3377800E1A12D /* DLACoreDataStore.h */,
+				04BC9B3C18F3377800E1A12D /* DLACoreDataStore.m */,
 				D9E870D218E9F85B00CF64F7 /* Images.xcassets */,
 				D9E870CF18E9F85B00CF64F7 /* DriveLA.xcdatamodeld */,
+				04D7E6AD18F932AF00A6781E /* Driver.h */,
+				04D7E6AE18F932AF00A6781E /* Driver.m */,
 				D9E870C418E9F85B00CF64F7 /* Supporting Files */,
 			);
 			path = DriveLA;
@@ -271,11 +314,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04295FF218F63396005122CC /* DLANameInputViewController.m in Sources */,
 				D9E870CE18E9F85B00CF64F7 /* DLAAppDelegate.m in Sources */,
+				04BC9B3D18F3377800E1A12D /* DLACoreDataStore.m in Sources */,
 				D9E870CA18E9F85B00CF64F7 /* main.m in Sources */,
+				04D7E6AF18F932AF00A6781E /* Driver.m in Sources */,
+				04295FF518F6673D005122CC /* DLAPhoneInputViewController.m in Sources */,
 				0406227918ECABC600FA411C /* DLADriversLicenseViewController.m in Sources */,
+				0469CC6318F67A8E008B9691 /* DLAEmailInputViewController.m in Sources */,
 				D9E870D118E9F85B00CF64F7 /* DriveLA.xcdatamodeld in Sources */,
 				04DFE31E18EA063100F8D5B4 /* DLAHomeViewController.m in Sources */,
+				0469CC6718F67E6D008B9691 /* DLAAddressInputViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,9 +538,14 @@
 		D9E870CF18E9F85B00CF64F7 /* DriveLA.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				04D7E6AC18F931EE00A6781E /* DriveLA 6.xcdatamodel */,
+				0469CC5A18F67844008B9691 /* DriveLA 5.xcdatamodel */,
+				04295FF918F66BF5005122CC /* DriveLA 4.xcdatamodel */,
+				04295FE918F5E1F7005122CC /* DriveLA 3.xcdatamodel */,
+				04BC9B3E18F33FB100E1A12D /* DriveLA 2.xcdatamodel */,
 				D9E870D018E9F85B00CF64F7 /* DriveLA.xcdatamodel */,
 			);
-			currentVersion = D9E870D018E9F85B00CF64F7 /* DriveLA.xcdatamodel */;
+			currentVersion = 04D7E6AC18F931EE00A6781E /* DriveLA 6.xcdatamodel */;
 			path = DriveLA.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

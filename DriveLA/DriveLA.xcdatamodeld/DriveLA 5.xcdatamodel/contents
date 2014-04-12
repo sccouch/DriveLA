@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="13C64" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Driver" representedClassName="Driver" syncable="YES">
+        <attribute name="driversLicenseExpirationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="driversLicenseNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="insuranceCompany" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="insurancePhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="insurancePolicyNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="licensePlateNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="middleInitial" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="suffix" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vehicleColor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vehicleMake" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vehicleModel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vehicleYear" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Driver" positionX="-63" positionY="-18" width="128" height="285"/>
+    </elements>
+</model>
