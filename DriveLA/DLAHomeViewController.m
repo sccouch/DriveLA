@@ -19,6 +19,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        [self.tableView setSeparatorInset:UIEdgeInsetsZero];
     }
     return self;
 }
@@ -26,6 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.tableView setSeparatorInset:UIEdgeInsetsZero];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -115,5 +117,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end
