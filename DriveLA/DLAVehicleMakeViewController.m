@@ -1,20 +1,19 @@
 //
-//  DLAEmailInputViewController.m
+//  DLAVehicleMakeViewController.m
 //  DriveLA
 //
-//  Created by Jack Okerman on 4/10/14.
+//  Created by Jack Okerman on 4/15/14.
 //  Copyright (c) 2014 USC. All rights reserved.
 //
 
-#import "DLAEmailInputViewController.h"
+#import "DLAVehicleMakeViewController.h"
 
-@interface DLAEmailInputViewController ()
-
-@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@interface DLAVehicleMakeViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *makeTextField;
 
 @end
 
-@implementation DLAEmailInputViewController
+@implementation DLAVehicleMakeViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -29,7 +28,7 @@
 {
     [super viewDidLoad];
     
-    [self.emailTextField becomeFirstResponder];
+    [self.makeTextField becomeFirstResponder];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -39,9 +38,8 @@
     Driver *driver = [[DLACoreDataStore sharedStore] fetchDriver];
     
     if (driver) {
-        if (driver.email) {
-            self.emailTextField.text = driver.email;
-        }
+        if (driver.vehicleMake)
+            self.makeTextField.text = driver.vehicleMake;
     }
     
 }
@@ -67,13 +65,13 @@
 }
 
 - (IBAction)saveButtonPressed:(id)sender {
-    // Validate input
+    // Validate data
     
     // Save to data store
-    NSDictionary *emailDictionary = @{@"email": self.emailTextField.text};
-    [[DLACoreDataStore sharedStore] updateDriverInfo:emailDictionary];
+    NSDictionary *myDictionary = @{@"vehicleMake": self.makeTextField.text};
+    [[DLACoreDataStore sharedStore] updateDriverInfo:myDictionary];
     
-    // Dismis view controller
+    // Dismiss view controller
     [self.navigationController popViewControllerAnimated:YES];
 }
 

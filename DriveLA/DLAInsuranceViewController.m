@@ -1,20 +1,21 @@
 //
-//  DLAEmailInputViewController.m
+//  DLAInsuranceViewController.m
 //  DriveLA
 //
-//  Created by Jack Okerman on 4/10/14.
+//  Created by Jack Okerman on 4/15/14.
 //  Copyright (c) 2014 USC. All rights reserved.
 //
 
-#import "DLAEmailInputViewController.h"
+#import "DLAInsuranceViewController.h"
 
-@interface DLAEmailInputViewController ()
-
-@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@interface DLAInsuranceViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *companyTextField;
+@property (weak, nonatomic) IBOutlet UILabel *policyNumberTextField;
+@property (weak, nonatomic) IBOutlet UILabel *phoneTextField;
 
 @end
 
-@implementation DLAEmailInputViewController
+@implementation DLAInsuranceViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -28,22 +29,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self.emailTextField becomeFirstResponder];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    
     [super viewWillAppear:animated];
     
     Driver *driver = [[DLACoreDataStore sharedStore] fetchDriver];
-    
     if (driver) {
-        if (driver.email) {
-            self.emailTextField.text = driver.email;
-        }
+        if (driver.insuranceCompany)
+            self.companyTextField.text = driver.insuranceCompany;
+        if (driver.insurancePolicyNumber)
+            self.policyNumberTextField.text = driver.insurancePolicyNumber;
+        if (driver.insurancePhone)
+            self.phoneTextField.text = driver.insurancePhone;
     }
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,18 +62,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 1;
-}
-
-- (IBAction)saveButtonPressed:(id)sender {
-    // Validate input
-    
-    // Save to data store
-    NSDictionary *emailDictionary = @{@"email": self.emailTextField.text};
-    [[DLACoreDataStore sharedStore] updateDriverInfo:emailDictionary];
-    
-    // Dismis view controller
-    [self.navigationController popViewControllerAnimated:YES];
+    return 3;
 }
 
 @end

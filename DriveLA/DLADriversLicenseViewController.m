@@ -13,6 +13,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
 @property (weak, nonatomic) IBOutlet UILabel *emailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *licenseNumberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *expirationDateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
+@property (strong, nonatomic) NSDateFormatter *dateFormatter;
 
 @end
 @implementation DLADriversLicenseViewController
@@ -29,6 +33,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    if (!self.dateFormatter) {
+        self.dateFormatter = [[NSDateFormatter alloc] init];
+        [self.dateFormatter setDateFormat:@"MMM dd, yyyy"];
+    }
 //    [self initExpirationDateTextField];
 //    [self.expirationDateTextField setDelegate:self];
 //    self.expirationDateTextField.tintColor = [UIColor clearColor];
@@ -51,10 +60,17 @@
     Driver *driver = [[DLACoreDataStore sharedStore] fetchDriver];
     if (driver) {
         self.nameLabel.text = [driver getFullName];
+        self.addressLabel.text = [driver getAddress];
         if (driver.phone)
             self.phoneLabel.text = driver.phone;
         if (driver.email)
             self.emailLabel.text = driver.email;
+        if (driver.driversLicenseNumber)
+            self.licenseNumberLabel.text = driver.driversLicenseNumber;
+        if (driver.driversLicenseExpirationDate) {
+            self.expirationDateLabel.text = [self.dateFormatter stringFromDate:driver.driversLicenseExpirationDate];
+        }
+            
     }
 }
 
@@ -83,41 +99,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-//    if ([indexPath isEqual:[NSIndexPath indexPathForRow:0 inSection:2]]) {
-////        NSLog(@"Expiration date cell selected");
-//        
-//    }
-    
 }
 
-//- (void)initExpirationDateTextField {
-//    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-//    [dateFormatter setDateFormat:@"MM/dd/yy"];
-//    self.expirationDateTextField.text = [dateFormatter stringFromDate: [[NSDate alloc] init]];
-//}
-
-//- (void) textFieldDidBeginEditing:(UITextField *)textField {
-//    if (textField == self.expirationDateTextField) {
-//        UIDatePicker *datePicker = [[UIDatePicker alloc] init];
-//        datePicker.datePickerMode = UIDatePickerModeDate;
-//        [datePicker addTarget:self action:@selector(datePickerValueChanged:) forControlEvents:UIControlEventValueChanged];
-//        textField.inputView = datePicker;
-//    }
-//}
-
-//- (IBAction)datePickerValueChanged:(id)sender {
-//    NSDate *pickerDate = [sender date];
-//    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-//    [dateFormatter setDateFormat:@"MM/dd/yy"];
-//    NSString *dateString = [dateFormatter stringFromDate:pickerDate];
-//    self.expirationDateTextField.text = dateString;
-//}
-
-//- (IBAction)saveDriversLicense:(id)sender {
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 //    
-//    NSDictionary *licenseInfo = @{@"name": self.nameTextField.text};
+//    if (indexPath.section == 0 && indexPath.row == 1)
+//        return 200;
+//    else
+//        return self.tableView.rowHeight;
 //    
-//    [[DLACoreDataStore sharedStore] updateDriverInfo:licenseInfo];
 //}
 
 

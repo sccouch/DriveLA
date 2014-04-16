@@ -1,20 +1,19 @@
 //
-//  DLAEmailInputViewController.m
+//  DLALicenseNumberViewController.m
 //  DriveLA
 //
-//  Created by Jack Okerman on 4/10/14.
+//  Created by Jack Okerman on 4/14/14.
 //  Copyright (c) 2014 USC. All rights reserved.
 //
 
-#import "DLAEmailInputViewController.h"
+#import "DLALicenseNumberViewController.h"
 
-@interface DLAEmailInputViewController ()
-
-@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@interface DLALicenseNumberViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *licenseNumberTextField;
 
 @end
 
-@implementation DLAEmailInputViewController
+@implementation DLALicenseNumberViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -29,7 +28,7 @@
 {
     [super viewDidLoad];
     
-    [self.emailTextField becomeFirstResponder];
+    [self.licenseNumberTextField becomeFirstResponder];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -39,8 +38,8 @@
     Driver *driver = [[DLACoreDataStore sharedStore] fetchDriver];
     
     if (driver) {
-        if (driver.email) {
-            self.emailTextField.text = driver.email;
+        if (driver.driversLicenseNumber) {
+            self.licenseNumberTextField.text = driver.driversLicenseNumber;
         }
     }
     
@@ -67,14 +66,16 @@
 }
 
 - (IBAction)saveButtonPressed:(id)sender {
-    // Validate input
+    
+    // Validate data
     
     // Save to data store
-    NSDictionary *emailDictionary = @{@"email": self.emailTextField.text};
-    [[DLACoreDataStore sharedStore] updateDriverInfo:emailDictionary];
+    NSDictionary *licenceNumberDictionary = @{@"driversLicenseNumber": self.licenseNumberTextField.text};
+    [[DLACoreDataStore sharedStore] updateDriverInfo:licenceNumberDictionary];
     
-    // Dismis view controller
+    // Dismiss view controller
     [self.navigationController popViewControllerAnimated:YES];
+    
 }
 
 @end
