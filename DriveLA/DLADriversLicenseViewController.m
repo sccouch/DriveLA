@@ -60,7 +60,15 @@
     Driver *driver = [[DLACoreDataStore sharedStore] fetchDriver];
     if (driver) {
         self.nameLabel.text = [driver getFullName];
+        
+        
         self.addressLabel.text = [driver getAddress];
+        
+        NSDictionary *attributes = @{NSFontAttributeName: self.addressLabel.font};
+        CGRect rect = [[driver getAddress] boundingRectWithSize:CGSizeMake(206, 48) options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
+        
+        [self.addressLabel setFrame:CGRectMake(self.tableView.bounds.size.width - 33 - rect.size.width, 65.0/2 - rect.size.height/2, rect.size.width, rect.size.height)];
+        
         if (driver.phone)
             self.phoneLabel.text = driver.phone;
         if (driver.email)

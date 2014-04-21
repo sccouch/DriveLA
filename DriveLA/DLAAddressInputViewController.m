@@ -31,6 +31,11 @@
 {
     [super viewDidLoad];
     
+    self.streetTextField.delegate = self;
+    self.cityTextField.delegate = self;
+    self.stateTextField.delegate = self;
+    self.zipcodeTextField.delegate = self;
+    
     [self.streetTextField becomeFirstResponder];
 }
 
@@ -86,6 +91,49 @@
     
     // Dismiss view controller
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    
+    NSUInteger newLength = [textField.text length] + [string length] - range.length;
+    
+    if (textField == self.streetTextField) {
+        
+        NSString *lastCharacter = [string length] > 0 ? [string substringFromIndex:[string length] - 1] : @"";
+        
+        if ([lastCharacter isEqualToString:@" "] && newLength > 1) {
+            [textField setKeyboardType:UIKeyboardTypeASCIICapable];
+            [textField reloadInputViews];
+        }
+        else if (newLength == 0) {
+            [textField setKeyboardType:UIKeyboardTypeNumbersAndPunctuation];
+            [textField reloadInputViews];
+        }
+        
+        return YES;
+    }
+    if (textField == self.stateTextField) {
+        return newLength > 2 ? NO : YES;
+    }
+    else if (textField == self.zipcodeTextField) {
+        return newLength > 5 ? NO : YES;
+    }
+    
+    return YES;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    if (![textField.text isEqualToString:@""]) {
+        if (textField == self.streetTextField)
+            [self.cityTextField becomeFirstResponder];
+        else if (textField == self.cityTextField)
+            [self.stateTextField becomeFirstResponder];
+        else if (textField == self.stateTextField)
+            [self.zipcodeTextField becomeFirstResponder];
+    }
+    
+    return YES;
 }
 
 @end

@@ -10,6 +10,6 @@
 #import "DLACoreDataStore.h"
 #import "Driver.h"
 
-@interface DLAAddressInputViewController : UITableViewController
+@interface DLAAddressInputViewController : UITableViewController<UITextFieldDelegate>
 
 @end
