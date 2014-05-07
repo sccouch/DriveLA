@@ -2,14 +2,19 @@
 //  Driver.m
 //  DriveLA
 //
-//  Created by Jack Okerman on 4/15/14.
+//  Created by Jack Okerman on 5/7/14.
 //  Copyright (c) 2014 USC. All rights reserved.
 //
 
 #import "Driver.h"
 
+
 @implementation Driver
 
+@dynamic addressCity;
+@dynamic addressState;
+@dynamic addressStreet;
+@dynamic addressZipcode;
 @dynamic driversLicenseExpirationDate;
 @dynamic driversLicenseNumber;
 @dynamic email;
@@ -26,10 +31,7 @@
 @dynamic vehicleMake;
 @dynamic vehicleModel;
 @dynamic vehicleYear;
-@dynamic addressStreet;
-@dynamic addressCity;
-@dynamic addressState;
-@dynamic addressZipcode;
+@dynamic accidents;
 
 - (NSString *) getFullName {
     

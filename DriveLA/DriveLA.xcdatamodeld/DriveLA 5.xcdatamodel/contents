@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C64" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Driver" representedClassName="Driver" syncable="YES">
+        <attribute name="accidents" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="addressCity" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="addressState" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="addressStreet" optional="YES" attributeType="String" syncable="YES"/>
@@ -23,6 +24,6 @@
         <attribute name="vehicleYear" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Driver" positionX="-63" positionY="-18" width="128" height="345"/>
+        <element name="Driver" positionX="-63" positionY="-18" width="128" height="358"/>
     </elements>
 </model>

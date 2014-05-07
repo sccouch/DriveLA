@@ -1502,10 +1502,10 @@
             </objects>
             <point key="canvasLocation" x="1109" y="842"/>
         </scene>
-        <!--Table View Controller - Accident Info-->
+        <!--Accident Input View Controller - Accident Info-->
         <scene sceneID="ZWf-Zg-lWA">
             <objects>
-                <tableViewController id="SAx-Eb-yr5" sceneMemberID="viewController">
+                <tableViewController id="SAx-Eb-yr5" customClass="DLAAccidentInputViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="A7d-ae-710">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1524,7 +1524,7 @@
                                                     <rect key="frame" x="20" y="7" width="280" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" enablesReturnKeyAutomatically="YES"/>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1540,7 +1540,7 @@
                                                     <rect key="frame" x="20" y="7" width="280" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="phonePad" enablesReturnKeyAutomatically="YES"/>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1572,7 +1572,7 @@
                                                     <rect key="frame" x="202" y="7" width="98" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES"/>
                                                 </textField>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" minimumFontSize="17" id="qx3-c7-STJ">
                                                     <rect key="frame" x="20" y="7" width="101" height="30"/>
@@ -1604,7 +1604,7 @@
                                                     <rect key="frame" x="20" y="7" width="280" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" enablesReturnKeyAutomatically="YES"/>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1620,7 +1620,7 @@
                                                     <rect key="frame" x="20" y="7" width="280" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" enablesReturnKeyAutomatically="YES"/>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1636,7 +1636,7 @@
                                                     <rect key="frame" x="20" y="7" width="280" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="phonePad" enablesReturnKeyAutomatically="YES"/>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1656,7 +1656,7 @@
                                                     <rect key="frame" x="20" y="7" width="280" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" enablesReturnKeyAutomatically="YES"/>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1672,7 +1672,7 @@
                                                     <rect key="frame" x="20" y="7" width="280" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" enablesReturnKeyAutomatically="YES"/>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1688,7 +1688,7 @@
                                                     <rect key="frame" x="20" y="7" width="280" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" enablesReturnKeyAutomatically="YES"/>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1701,7 +1701,27 @@
                             <outlet property="delegate" destination="SAx-Eb-yr5" id="Vyy-aO-RT1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Accident Info" id="SxB-Z2-0uq"/>
+                    <navigationItem key="navigationItem" title="Accident Info" id="SxB-Z2-0uq">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="RM5-v8-Zin">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="SAx-Eb-yr5" id="Frc-rF-Cah"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cityTextField" destination="qx3-c7-STJ" id="byN-SO-6AU"/>
+                        <outlet property="driverPhoneTextField" destination="nKj-bn-PaE" id="050-Yq-dLI"/>
+                        <outlet property="insuranceCompanyTextField" destination="Kb1-ii-hpr" id="EfZ-vJ-2ZE"/>
+                        <outlet property="insurancePhoneTextField" destination="zoJ-fg-Ctt" id="Air-AB-tCi"/>
+                        <outlet property="licensePlateTextField" destination="Bf1-ot-GCm" id="MHb-RK-iGW"/>
+                        <outlet property="makeTextField" destination="yGb-OV-efX" id="yAH-LI-vWF"/>
+                        <outlet property="modelTextField" destination="Cb0-gv-Z8m" id="ceI-Y1-4DE"/>
+                        <outlet property="nameTextField" destination="KSB-Cl-Ybn" id="L4D-es-e8S"/>
+                        <outlet property="policyNumberTextField" destination="z1D-Ti-YZf" id="ggY-la-X5C"/>
+                        <outlet property="stateTextField" destination="Yit-Yc-fMu" id="mPh-jJ-y1e"/>
+                        <outlet property="streetTextField" destination="jEf-Mb-259" id="yiM-wE-U6W"/>
+                        <outlet property="zipcodeTextField" destination="vtP-r0-86f" id="Aig-Ag-hXL"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZZK-Zr-D6Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

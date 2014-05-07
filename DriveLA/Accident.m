@@ -28,7 +28,7 @@
     self.make = [decoder decodeObjectForKey:@"make"];
     self.model = [decoder decodeObjectForKey:@"model"];
     self.plateNumber = [decoder decodeObjectForKey:@"plateNumber"];
-    self.insuranceCompany = [decoder decodeObjectForKey:@"insurancePhone"];
+    self.insurancePhone = [decoder decodeObjectForKey:@"insurancePhone"];
     
     return self;
 }
