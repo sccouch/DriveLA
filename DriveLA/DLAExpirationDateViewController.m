@@ -84,8 +84,6 @@
 
 - (IBAction)saveButtonPressed:(id)sender {
     
-    // Validate data
-    
     // Save to data store
     NSDictionary *expirationDateDictionary = @{@"driversLicenseExpirationDate": [self.dateFormatter dateFromString:self.expirationDateTextField.text]};
     [[DLACoreDataStore sharedStore] updateDriverInfo:expirationDateDictionary];

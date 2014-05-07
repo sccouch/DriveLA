@@ -66,12 +66,22 @@
 
 - (IBAction)saveButtonPressed:(id)sender {
     // Validate data
+    BOOL valid = YES;
+    if ([self.modelTextField.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self
+                                           style:CSNotificationViewStyleError
+                                         message:@"Enter a vehicle model"];
+        valid = NO;
+    }
     
-    // Save to data store
-    NSDictionary *myDictionary = @{@"vehicleModel": self.modelTextField.text};
-    [[DLACoreDataStore sharedStore] updateDriverInfo:myDictionary];
-    
-    // Dismiss view controller
-    [self.navigationController popViewControllerAnimated:YES];
+    if (valid) {
+        // Save to data store
+        NSDictionary *myDictionary = @{@"vehicleModel": self.modelTextField.text};
+        [[DLACoreDataStore sharedStore] updateDriverInfo:myDictionary];
+        
+        // Dismiss view controller
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+
 }
 @end

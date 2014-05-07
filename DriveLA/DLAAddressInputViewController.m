@@ -81,16 +81,45 @@
 
 - (IBAction)saveButtonPressed:(id)sender {
     // Validate data
+    BOOL valid = YES;
+    if ([self.streetTextField.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self
+                                           style:CSNotificationViewStyleError
+                                         message:@"Enter a street address"];
+        valid = NO;
+    }
+    else if ([self.cityTextField.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self
+                                           style:CSNotificationViewStyleError
+                                         message:@"Enter a city"];
+        valid = NO;
+    }
     
-    // Save to data store
-    NSDictionary *addressDictionary = @{@"addressStreet": self.streetTextField.text,
-                                        @"addressCity": self.cityTextField.text,
-                                        @"addressState": self.stateTextField.text,
-                                        @"addressZipcode": self.zipcodeTextField.text};
-    [[DLACoreDataStore sharedStore] updateDriverInfo:addressDictionary];
+    else if ([self.stateTextField.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self
+                                           style:CSNotificationViewStyleError
+                                         message:@"Enter a state"];
+        valid = NO;
+    }
+    else if ([self.zipcodeTextField.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self
+                                           style:CSNotificationViewStyleError
+                                         message:@"Enter a zipcode"];
+        valid = NO;
+    }
     
-    // Dismiss view controller
-    [self.navigationController popViewControllerAnimated:YES];
+    if (valid) {
+        // Save to data store
+        NSDictionary *addressDictionary = @{@"addressStreet": self.streetTextField.text,
+                                            @"addressCity": self.cityTextField.text,
+                                            @"addressState": self.stateTextField.text,
+                                            @"addressZipcode": self.zipcodeTextField.text};
+        [[DLACoreDataStore sharedStore] updateDriverInfo:addressDictionary];
+        
+        // Dismiss view controller
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {

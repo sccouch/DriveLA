@@ -66,13 +66,23 @@
 
 - (IBAction)saveButtonPressed:(id)sender {
     // Validate data
+    BOOL valid = YES;
+    if ([self.licencePlateTextField.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self
+                                           style:CSNotificationViewStyleError
+                                         message:@"Enter a license plate"];
+        valid = NO;
+    }
     
-    // Save to data store
-    NSDictionary *myDictionary = @{@"licensePlateNumber": self.licencePlateTextField.text};
-    [[DLACoreDataStore sharedStore] updateDriverInfo:myDictionary];
+    if (valid) {
+        // Save to data store
+        NSDictionary *myDictionary = @{@"licensePlateNumber": self.licencePlateTextField.text};
+        [[DLACoreDataStore sharedStore] updateDriverInfo:myDictionary];
+        
+        // Dismiss view controller
+        [self.navigationController popViewControllerAnimated:YES];
+    }
     
-    // Dismiss view controller
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

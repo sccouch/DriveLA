@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DLACoreDataStore.h"
 #import "Driver.h"
+#import "CSNotificationView.h"
 
 @interface DLALicensePlateViewController : UITableViewController
 

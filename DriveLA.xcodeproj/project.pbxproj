@@ -23,8 +23,11 @@
 		0440F87718FE4094002F6E33 /* DLAVehicleYearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440F87618FE4094002F6E33 /* DLAVehicleYearViewController.m */; };
 		0440F87A18FE40F6002F6E33 /* DLAVehicleColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440F87918FE40F6002F6E33 /* DLAVehicleColorViewController.m */; };
 		0440F87D18FE4124002F6E33 /* DLALicensePlateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440F87C18FE4124002F6E33 /* DLALicensePlateViewController.m */; };
+		0440F88719085746002F6E33 /* CSNotificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440F88519085746002F6E33 /* CSNotificationView.m */; };
+		0440F88819085746002F6E33 /* CSNotificationView.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0440F88619085746002F6E33 /* CSNotificationView.xcassets */; };
 		0469CC6318F67A8E008B9691 /* DLAEmailInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0469CC6218F67A8E008B9691 /* DLAEmailInputViewController.m */; };
 		0469CC6718F67E6D008B9691 /* DLAAddressInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0469CC6618F67E6D008B9691 /* DLAAddressInputViewController.m */; };
+		04983ED619199F430050AB79 /* Accident.m in Sources */ = {isa = PBXBuildFile; fileRef = 04983ED519199F430050AB79 /* Accident.m */; };
 		04BC9B3D18F3377800E1A12D /* DLACoreDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BC9B3C18F3377800E1A12D /* DLACoreDataStore.m */; };
 		04DFE31E18EA063100F8D5B4 /* DLAHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DFE31D18EA063100F8D5B4 /* DLAHomeViewController.m */; };
 		299CE7CA18FBB2AA000BF61E /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 299CE7C018FBB2AA000BF61E /* lock.png */; };
@@ -107,11 +110,16 @@
 		0440F87918FE40F6002F6E33 /* DLAVehicleColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAVehicleColorViewController.m; sourceTree = "<group>"; };
 		0440F87B18FE4124002F6E33 /* DLALicensePlateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLALicensePlateViewController.h; sourceTree = "<group>"; };
 		0440F87C18FE4124002F6E33 /* DLALicensePlateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLALicensePlateViewController.m; sourceTree = "<group>"; };
+		0440F88419085746002F6E33 /* CSNotificationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSNotificationView.h; sourceTree = "<group>"; };
+		0440F88519085746002F6E33 /* CSNotificationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSNotificationView.m; sourceTree = "<group>"; };
+		0440F88619085746002F6E33 /* CSNotificationView.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CSNotificationView.xcassets; sourceTree = "<group>"; };
 		0469CC5A18F67844008B9691 /* DriveLA 5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DriveLA 5.xcdatamodel"; sourceTree = "<group>"; };
 		0469CC6118F67A8E008B9691 /* DLAEmailInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAEmailInputViewController.h; sourceTree = "<group>"; };
 		0469CC6218F67A8E008B9691 /* DLAEmailInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAEmailInputViewController.m; sourceTree = "<group>"; };
 		0469CC6518F67E6D008B9691 /* DLAAddressInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAAddressInputViewController.h; sourceTree = "<group>"; };
 		0469CC6618F67E6D008B9691 /* DLAAddressInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAAddressInputViewController.m; sourceTree = "<group>"; };
+		04983ED419199F430050AB79 /* Accident.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Accident.h; sourceTree = "<group>"; };
+		04983ED519199F430050AB79 /* Accident.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Accident.m; sourceTree = "<group>"; };
 		04BC9B3B18F3377800E1A12D /* DLACoreDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLACoreDataStore.h; sourceTree = "<group>"; };
 		04BC9B3C18F3377800E1A12D /* DLACoreDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLACoreDataStore.m; sourceTree = "<group>"; };
 		04BC9B3E18F33FB100E1A12D /* DriveLA 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DriveLA 2.xcdatamodel"; sourceTree = "<group>"; };
@@ -217,6 +225,24 @@
 			name = Vehicle;
 			sourceTree = "<group>";
 		};
+		0440F87E19084EB5002F6E33 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0440F88319085746002F6E33 /* CSNotificationView */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0440F88319085746002F6E33 /* CSNotificationView */ = {
+			isa = PBXGroup;
+			children = (
+				0440F88419085746002F6E33 /* CSNotificationView.h */,
+				0440F88519085746002F6E33 /* CSNotificationView.m */,
+				0440F88619085746002F6E33 /* CSNotificationView.xcassets */,
+			);
+			path = CSNotificationView;
+			sourceTree = "<group>";
+		};
 		0469CC6418F67E01008B9691 /* DriversLicense */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +262,15 @@
 				0440F85718FCE812002F6E33 /* DLAExpirationDateViewController.m */,
 			);
 			name = DriversLicense;
+			sourceTree = "<group>";
+		};
+		04983ED319199F1B0050AB79 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04983ED419199F430050AB79 /* Accident.h */,
+				04983ED519199F430050AB79 /* Accident.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		04DFE31B18E9FE7000F8D5B4 /* Controllers */ = {
@@ -309,6 +344,7 @@
 		D9E870C318E9F85A00CF64F7 /* DriveLA */ = {
 			isa = PBXGroup;
 			children = (
+				04983ED319199F1B0050AB79 /* Models */,
 				299CE7BF18FBB298000BF61E /* Images */,
 				04DFE31B18E9FE7000F8D5B4 /* Controllers */,
 				D9E870F018E9FBD400CF64F7 /* Main.storyboard */,
@@ -320,6 +356,7 @@
 				0440F85918FDF0CA002F6E33 /* Driver.h */,
 				0440F85A18FDF0CA002F6E33 /* Driver.m */,
 				D9E870CF18E9F85B00CF64F7 /* DriveLA.xcdatamodeld */,
+				0440F87E19084EB5002F6E33 /* Resources */,
 				D9E870C418E9F85B00CF64F7 /* Supporting Files */,
 			);
 			path = DriveLA;
@@ -449,6 +486,7 @@
 				D9E870D318E9F85B00CF64F7 /* Images.xcassets in Resources */,
 				299CE7E118FBCFB1000BF61E /* lines@2x.png in Resources */,
 				299CE7DD18FBCBAA000BF61E /* map@2x.png in Resources */,
+				0440F88819085746002F6E33 /* CSNotificationView.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,9 +515,11 @@
 				0440F85B18FDF0CA002F6E33 /* Driver.m in Sources */,
 				04BC9B3D18F3377800E1A12D /* DLACoreDataStore.m in Sources */,
 				0440F87A18FE40F6002F6E33 /* DLAVehicleColorViewController.m in Sources */,
+				0440F88719085746002F6E33 /* CSNotificationView.m in Sources */,
 				0440F86818FE3C5C002F6E33 /* DLAVehicleViewController.m in Sources */,
 				0440F87118FE3FAF002F6E33 /* DLAVehicleMakeViewController.m in Sources */,
 				D9E870CA18E9F85B00CF64F7 /* main.m in Sources */,
+				04983ED619199F430050AB79 /* Accident.m in Sources */,
 				04295FF518F6673D005122CC /* DLAPhoneInputViewController.m in Sources */,
 				0406227918ECABC600FA411C /* DLADriversLicenseViewController.m in Sources */,
 				0469CC6318F67A8E008B9691 /* DLAEmailInputViewController.m in Sources */,

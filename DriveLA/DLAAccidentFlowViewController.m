@@ -19,33 +19,24 @@
 @implementation DLAAccidentFlowViewController
 - (IBAction)leftButtonPressed:(id)sender {
     switch (self.state) {
-        case accidentFlowVehiclesInvolved:
-            self.state = accidentFlowYourVehicle;
-            // yes or no
+        case accidentFlowAskCall911:
+            self.state = accidentFlowCall911;
             [self reloadData];
             break;
         
-        case accidentFlowYourVehicle:
-            self.state = accidentFlowAnotherVehicle;
+        case accidentFlowCall911:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:12125551212"]];
+            [self performSegueWithIdentifier:@"AccidentEntry" sender:self];
+            break;
+            
+        case accidentFlowAskCallNonEmergency:
+            self.state = accidentFlowCallNonEmergency;
             [self reloadData];
             break;
             
-        case accidentFlowAnotherVehicle:
-            self.state = accidentFlowOtherVehiclesDamaged;
-            [self reloadData];
-            break;
-            
-        case accidentFlowOtherVehiclesDamaged:
-            self.state = accidentFlowWitnesses;
-            [self reloadData];
-            break;
-            
-        case accidentFlowWitnesses:
-            self.state = accidentFlowPictures;
-            [self reloadData];
-            break;
-            
-        case accidentFlowPictures:
+        case accidentFlowCallNonEmergency:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:12125551212"]];
+            [self performSegueWithIdentifier:@"AccidentEntry" sender:self];
             break;
             
         default:
@@ -56,9 +47,22 @@
 
 - (IBAction)rightButtonPressed:(id)sender {
     switch (self.state) {
-        case accidentFlowVehiclesInvolved:
-            self.state = accidentFlowYourVehicle;
+        case accidentFlowAskCall911:
+            self.state = accidentFlowAskCallNonEmergency;
             [self reloadData];
+            break;
+            
+        case accidentFlowCall911:
+            self.state = accidentFlowAskCallNonEmergency;
+            [self reloadData];
+            break;
+            
+        case accidentFlowAskCallNonEmergency:
+            [self performSegueWithIdentifier:@"AccidentEntry" sender:self];
+            break;
+            
+        case accidentFlowCallNonEmergency:
+            [self performSegueWithIdentifier:@"AccidentEntry" sender:self];
             break;
             
         default:
@@ -68,56 +72,32 @@
 
 - (void)reloadData {
     switch (self.state) {
-        case accidentFlowVehiclesInvolved:
-            self.questionLabel.text = @"How many vehicles were involved?";
-            [self.leftButton setTitle:@"1" forState:UIControlStateNormal];
-            [self.rightButton setTitle:@"2+" forState:UIControlStateNormal];
+        case accidentFlowAskCall911:
+            self.questionLabel.text = @"Is anybody hurt or any driver intoxicated?";
+            [self.leftButton setTitle:@"Yes" forState:UIControlStateNormal];
+            [self.rightButton setTitle:@"No" forState:UIControlStateNormal];
+            break;
+            
+        case accidentFlowCall911:
+            self.questionLabel.text = @"It is recommended that you call 911.";
+            [self.leftButton setTitle:@"Call 911" forState:UIControlStateNormal];
+            //[self.leftButton sizeToFit];
+            [self.rightButton setTitle:@"Ok" forState:UIControlStateNormal];
             break;
         
-        case accidentFlowYourVehicle:{
-            [UIView animateWithDuration:.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-                [self.questionLabel setText:@"Was your vehicle damaged?"];
-                [self.leftButton setTitle:@"Yes" forState:UIControlStateNormal];
-                [self.rightButton setTitle:@"No" forState:UIControlStateNormal];
-            } completion:nil];
-            
+        case accidentFlowAskCallNonEmergency:
+            self.questionLabel.text = @"Was there a hit and run, an unlicensed driver, or damage to city property?";
+            [self.leftButton setTitle:@"Yes" forState:UIControlStateNormal];
+            [self.rightButton setTitle:@"No" forState:UIControlStateNormal];
             break;
-        }
             
-        case accidentFlowAnotherVehicle:{
-            [UIView animateWithDuration:.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-                [self.questionLabel setText:@"Was another vehicle damaged?"];
-                [self.leftButton setTitle:@"Yes" forState:UIControlStateNormal];
-                [self.rightButton setTitle:@"No" forState:UIControlStateNormal];
-            } completion:nil];
-            
+        case accidentFlowCallNonEmergency:
+            self.questionLabel.text = @"It is recommended that you call the LAPD non-emergency number to file a police report.";
+            [self.leftButton setTitle:@"Call LAPD" forState:UIControlStateNormal];
+            //[self.leftButton sizeToFit];
+            [self.rightButton setTitle:@"Ok" forState:UIControlStateNormal];
             break;
-        }
             
-        case accidentFlowOtherVehiclesDamaged:{
-            [UIView animateWithDuration:.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-                [self.questionLabel setText:@"How many other vehicles were damaged?"];
-                [self.centerButton setHidden:NO];
-                [self.centerButton setTitle:@"2" forState:UIControlStateNormal];
-                [self.leftButton setTitle:@"3+" forState:UIControlStateNormal];
-                [self.rightButton setTitle:@"1" forState:UIControlStateNormal];
-            } completion:nil];
-            
-            break;
-        }
-            
-        case accidentFlowWitnesses:{
-            [UIView animateWithDuration:.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-                [self.questionLabel setText:@"Are there any witnesses?"];
-                [self.centerButton setHidden:YES];
-                [self.leftButton setTitle:@"No" forState:UIControlStateNormal];
-                [self.rightButton setTitle:@"Yes" forState:UIControlStateNormal];
-            } completion:nil];
-            
-            break;
-        }
-            
-
         default:
             break;
     }
@@ -136,7 +116,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.state = accidentFlowVehiclesInvolved;
+    self.state = accidentFlowAskCall911;
     [self reloadData];
     // Do any additional setup after loading the view.
 }

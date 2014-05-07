@@ -8,15 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface DLAAccidentFlowViewController : UIViewController
 
 typedef enum {
-    accidentFlowVehiclesInvolved,
-    accidentFlowYourVehicle,
-    accidentFlowAnotherVehicle,
-    accidentFlowOtherVehiclesDamaged,
-    accidentFlowWitnesses,
-    accidentFlowPictures
+    accidentFlowAskCall911,
+    accidentFlowAskCallNonEmergency,
+    accidentFlowCall911,
+    accidentFlowCallNonEmergency
 } accidentFlowState;
 
 @property accidentFlowState state;

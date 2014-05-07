@@ -66,13 +66,22 @@
 
 - (IBAction)saveButtonPressed:(id)sender {
     // Validate data
+    BOOL valid = YES;
+    if ([self.policyNumberTextField.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self
+                                           style:CSNotificationViewStyleError
+                                         message:@"Enter a policy number"];
+        valid = NO;
+    }
     
-    // Save to data store
-    NSDictionary *myDictionary = @{@"insurancePolicyNumber": self.policyNumberTextField.text};
-    [[DLACoreDataStore sharedStore] updateDriverInfo:myDictionary];
+    if (valid) {
+        // Save to data store
+        NSDictionary *myDictionary = @{@"insurancePolicyNumber": self.policyNumberTextField.text};
+        [[DLACoreDataStore sharedStore] updateDriverInfo:myDictionary];
     
-    // Dismiss view controller
-    [self.navigationController popViewControllerAnimated:YES];
+        // Dismiss view controller
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 @end

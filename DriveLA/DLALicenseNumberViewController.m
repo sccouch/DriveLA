@@ -68,13 +68,23 @@
 - (IBAction)saveButtonPressed:(id)sender {
     
     // Validate data
+    BOOL valid = YES;
+    if ([self.licenseNumberTextField.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self
+                                           style:CSNotificationViewStyleError
+                                         message:@"Enter a license number"];
+        valid = NO;
+    }
     
-    // Save to data store
-    NSDictionary *licenceNumberDictionary = @{@"driversLicenseNumber": self.licenseNumberTextField.text};
-    [[DLACoreDataStore sharedStore] updateDriverInfo:licenceNumberDictionary];
-    
-    // Dismiss view controller
-    [self.navigationController popViewControllerAnimated:YES];
+    if (valid) {
+        // Save to data store
+        NSDictionary *licenceNumberDictionary = @{@"driversLicenseNumber": self.licenseNumberTextField.text};
+        [[DLACoreDataStore sharedStore] updateDriverInfo:licenceNumberDictionary];
+        
+        // Dismiss view controller
+        [self.navigationController popViewControllerAnimated:YES];
+        
+    }
     
 }
 

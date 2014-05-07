@@ -66,13 +66,23 @@
 
 - (IBAction)saveButtonPressed:(id)sender {
     // Validate data
+    BOOL valid = YES;
+    if ([self.colorTextField.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self
+                                           style:CSNotificationViewStyleError
+                                         message:@"Enter a vehicle color"];
+        valid = NO;
+    }
     
-    // Save to data store
-    NSDictionary *myDictionary = @{@"vehicleColor": self.colorTextField.text};
-    [[DLACoreDataStore sharedStore] updateDriverInfo:myDictionary];
+    if (valid) {
+        // Save to data store
+        NSDictionary *myDictionary = @{@"vehicleColor": self.colorTextField.text};
+        [[DLACoreDataStore sharedStore] updateDriverInfo:myDictionary];
     
-    // Dismiss view controller
-    [self.navigationController popViewControllerAnimated:YES];
+        // Dismiss view controller
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    
 }
 
 @end

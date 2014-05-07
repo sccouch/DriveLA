@@ -110,18 +110,36 @@
 }
 
 - (IBAction)saveButtonPressed:(id)sender {
+    
     // Validate
+    BOOL valid = YES;
+    if ([self.firstNameTextField.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self
+                                           style:CSNotificationViewStyleError
+                                         message:@"Enter a first name"];
+        valid = NO;
+    }
+    else if ([self.lastNameTextField.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self
+                                           style:CSNotificationViewStyleError
+                                         message:@"Enter a last name"];
+        valid = NO;
+    }
     
-    // Save to data store
-    NSMutableDictionary *nameInfo = [[NSMutableDictionary alloc] init];
-    [nameInfo setObject:self.firstNameTextField.text forKey:@"firstName"];
-    [nameInfo setObject:self.middleInitialTextField.text forKey:@"middleInitial"];
-    [nameInfo setObject:self.lastNameTextField.text forKey:@"lastName"];
-    [nameInfo setObject:self.suffixTextField.text forKey:@"suffix"];
-    [[DLACoreDataStore sharedStore] updateDriverInfo:nameInfo];
     
-    // Dismiss view controller
-    [self.navigationController popViewControllerAnimated:YES];
+    
+    if (valid) {
+        // Save to data store
+        NSMutableDictionary *nameInfo = [[NSMutableDictionary alloc] init];
+        [nameInfo setObject:self.firstNameTextField.text forKey:@"firstName"];
+        [nameInfo setObject:self.middleInitialTextField.text forKey:@"middleInitial"];
+        [nameInfo setObject:self.lastNameTextField.text forKey:@"lastName"];
+        [nameInfo setObject:self.suffixTextField.text forKey:@"suffix"];
+        [[DLACoreDataStore sharedStore] updateDriverInfo:nameInfo];
+        
+        // Dismiss view controller
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 @end

@@ -65,13 +65,23 @@
 
 - (IBAction)saveButtonPressed:(id)sender {
     // Validate data
+    BOOL valid = YES;
+    if ([self.companyTextField.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self
+                                           style:CSNotificationViewStyleError
+                                         message:@"Enter an insurance company"];
+        valid = NO;
+    }
     
-    // Save to data store
-    NSDictionary *companyDictionary = @{@"insuranceCompany": self.companyTextField.text};
-    [[DLACoreDataStore sharedStore] updateDriverInfo:companyDictionary];
-    
-    // Dismiss view controller
-    [self.navigationController popViewControllerAnimated:YES];
+    if (valid) {
+        // Save to data store
+        NSDictionary *companyDictionary = @{@"insuranceCompany": self.companyTextField.text};
+        [[DLACoreDataStore sharedStore] updateDriverInfo:companyDictionary];
+        
+        // Dismiss view controller
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+
 }
 
 @end

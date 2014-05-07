@@ -66,13 +66,23 @@
 
 - (IBAction)saveButtonPressed:(id)sender {
     // Validate data
+    BOOL valid = YES;
+    if ([self.makeTextField.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self
+                                           style:CSNotificationViewStyleError
+                                         message:@"Enter a vehicle make"];
+        valid = NO;
+    }
     
-    // Save to data store
-    NSDictionary *myDictionary = @{@"vehicleMake": self.makeTextField.text};
-    [[DLACoreDataStore sharedStore] updateDriverInfo:myDictionary];
+    if (valid) {
+        // Save to data store
+        NSDictionary *myDictionary = @{@"vehicleMake": self.makeTextField.text};
+        [[DLACoreDataStore sharedStore] updateDriverInfo:myDictionary];
+        
+        // Dismiss view controller
+        [self.navigationController popViewControllerAnimated:YES];
+    }
     
-    // Dismiss view controller
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
