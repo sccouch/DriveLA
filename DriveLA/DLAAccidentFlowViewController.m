@@ -82,7 +82,7 @@
             self.questionLabel.text = @"It is recommended that you call 911.";
             [self.leftButton setTitle:@"Call 911" forState:UIControlStateNormal];
             //[self.leftButton sizeToFit];
-            [self.rightButton setTitle:@"Ok" forState:UIControlStateNormal];
+            [self.rightButton setTitle:@"OK" forState:UIControlStateNormal];
             break;
         
         case accidentFlowAskCallNonEmergency:
@@ -95,7 +95,7 @@
             self.questionLabel.text = @"It is recommended that you call the LAPD non-emergency number to file a police report.";
             [self.leftButton setTitle:@"Call LAPD" forState:UIControlStateNormal];
             //[self.leftButton sizeToFit];
-            [self.rightButton setTitle:@"Ok" forState:UIControlStateNormal];
+            [self.rightButton setTitle:@"OK" forState:UIControlStateNormal];
             break;
             
         default:
