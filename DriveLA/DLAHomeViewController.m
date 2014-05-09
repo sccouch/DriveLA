@@ -67,6 +67,10 @@ NSInteger cellCount = 3;
         [driverDocumentsCell setBackgroundColor:green];
         [self.driverDocumentsImage setImage: [UIImage imageNamed:@"driver-documents.png"]];
         
+        NSIndexPath *path = [NSIndexPath indexPathWithIndex:1];
+        UITableViewCell *accidentDocumentsCell = [super tableView:tableView cellForRowAtIndexPath:path];
+        accidentDocumentsCell.accessoryType = UITableViewCellAccessoryNone;
+        
         CGRect frame = self.driverDocumentsLabel.frame;
         frame.origin.y=15;
         frame.origin.x= 105;
@@ -88,6 +92,10 @@ NSInteger cellCount = 3;
         self.accidentDocumentsLabel.hidden = NO;
         self.accidentDocumentsImage.hidden = NO;
         
+        NSIndexPath *path = [NSIndexPath indexPathWithIndex:1];
+        UITableViewCell *accidentDocumentsCell = [super tableView:tableView cellForRowAtIndexPath:path];
+        accidentDocumentsCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        
         CGRect frame = self.driverDocumentsLabel.frame;
         frame.origin.y=3;
         frame.origin.x= 105;
@@ -103,8 +111,12 @@ NSInteger cellCount = 3;
     }
     else {
         [self.driverDocumentsLabel sizeToFit];
+        NSIndexPath *path = [NSIndexPath indexPathWithIndex:1];
+        UITableViewCell *accidentDocumentsCell = [super tableView:tableView cellForRowAtIndexPath:path];
+        accidentDocumentsCell.accessoryType = UITableViewCellAccessoryNone;
         self.accidentDocumentsLabel.hidden = YES;
         self.accidentDocumentsImage.hidden = YES;
+        
         if (indexPath.row == 0 && indexPath.section == 0)
             return 156.0;
         else if (indexPath.row == 1 && indexPath.section == 0)
