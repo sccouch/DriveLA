@@ -46,8 +46,10 @@
     
     self.expirationDateTextField.inputView = self.datePicker;
     [self.expirationDateTextField becomeFirstResponder];
+    
+    self.expirationDateTextField.text = [self.dateFormatter stringFromDate: [[NSDate alloc] init]];
+    
 }
-
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
