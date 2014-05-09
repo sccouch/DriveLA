@@ -31,6 +31,13 @@
 		04983EDC191AEF8B0050AB79 /* Driver.m in Sources */ = {isa = PBXBuildFile; fileRef = 04983EDB191AEF8B0050AB79 /* Driver.m */; };
 		04BC9B3D18F3377800E1A12D /* DLACoreDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BC9B3C18F3377800E1A12D /* DLACoreDataStore.m */; };
 		04DFE31E18EA063100F8D5B4 /* DLAHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DFE31D18EA063100F8D5B4 /* DLAHomeViewController.m */; };
+		2939D9BC191C2D91001162AD /* DLAAccidentDocumentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2939D9BB191C2D91001162AD /* DLAAccidentDocumentsViewController.m */; };
+		2939D9BE191C3F99001162AD /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2939D9BD191C3F99001162AD /* MessageUI.framework */; };
+		2939D9C3191C5356001162AD /* accident-documents.png in Resources */ = {isa = PBXBuildFile; fileRef = 2939D9BF191C5356001162AD /* accident-documents.png */; };
+		2939D9C4191C5356001162AD /* driver-documents.png in Resources */ = {isa = PBXBuildFile; fileRef = 2939D9C0191C5356001162AD /* driver-documents.png */; };
+		2939D9C5191C5356001162AD /* accident-documents@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2939D9C1191C5356001162AD /* accident-documents@2x.png */; };
+		2939D9C6191C5356001162AD /* driver-documents@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2939D9C2191C5356001162AD /* driver-documents@2x.png */; };
+		2939D9C9191C7479001162AD /* DLAAccidentDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2939D9C8191C7479001162AD /* DLAAccidentDetailsViewController.m */; };
 		299CE7CA18FBB2AA000BF61E /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 299CE7C018FBB2AA000BF61E /* lock.png */; };
 		299CE7CB18FBB2AA000BF61E /* lock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 299CE7C118FBB2AA000BF61E /* lock@2x.png */; };
 		299CE7CC18FBB2AA000BF61E /* cone.png in Resources */ = {isa = PBXBuildFile; fileRef = 299CE7C218FBB2AA000BF61E /* cone.png */; };
@@ -129,6 +136,15 @@
 		04D7E6AC18F931EE00A6781E /* DriveLA 6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DriveLA 6.xcdatamodel"; sourceTree = "<group>"; };
 		04DFE31C18EA063100F8D5B4 /* DLAHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAHomeViewController.h; sourceTree = "<group>"; };
 		04DFE31D18EA063100F8D5B4 /* DLAHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAHomeViewController.m; sourceTree = "<group>"; };
+		2939D9BA191C2D90001162AD /* DLAAccidentDocumentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAAccidentDocumentsViewController.h; sourceTree = "<group>"; };
+		2939D9BB191C2D91001162AD /* DLAAccidentDocumentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAAccidentDocumentsViewController.m; sourceTree = "<group>"; };
+		2939D9BD191C3F99001162AD /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		2939D9BF191C5356001162AD /* accident-documents.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "accident-documents.png"; sourceTree = "<group>"; };
+		2939D9C0191C5356001162AD /* driver-documents.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "driver-documents.png"; sourceTree = "<group>"; };
+		2939D9C1191C5356001162AD /* accident-documents@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "accident-documents@2x.png"; sourceTree = "<group>"; };
+		2939D9C2191C5356001162AD /* driver-documents@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "driver-documents@2x.png"; sourceTree = "<group>"; };
+		2939D9C7191C7479001162AD /* DLAAccidentDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAAccidentDetailsViewController.h; sourceTree = "<group>"; };
+		2939D9C8191C7479001162AD /* DLAAccidentDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAAccidentDetailsViewController.m; sourceTree = "<group>"; };
 		299CE7C018FBB2AA000BF61E /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
 		299CE7C118FBB2AA000BF61E /* lock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lock@2x.png"; sourceTree = "<group>"; };
 		299CE7C218FBB2AA000BF61E /* cone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cone.png; sourceTree = "<group>"; };
@@ -173,6 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2939D9BE191C3F99001162AD /* MessageUI.framework in Frameworks */,
 				D9E870BE18E9F85A00CF64F7 /* CoreGraphics.framework in Frameworks */,
 				D9E870C218E9F85A00CF64F7 /* CoreData.framework in Frameworks */,
 				D9E870C018E9F85A00CF64F7 /* UIKit.framework in Frameworks */,
@@ -270,6 +287,8 @@
 		04983ED319199F1B0050AB79 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				04983EDA191AEF8B0050AB79 /* Driver.h */,
+				04983EDB191AEF8B0050AB79 /* Driver.m */,
 				04983ED419199F430050AB79 /* Accident.h */,
 				04983ED519199F430050AB79 /* Accident.m */,
 			);
@@ -279,22 +298,38 @@
 		04DFE31B18E9FE7000F8D5B4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				04983ED7191AD9CB0050AB79 /* DLAAccidentInputViewController.h */,
-				04983ED8191AD9CB0050AB79 /* DLAAccidentInputViewController.m */,
+				2939D9B9191C2D4C001162AD /* Accidents */,
 				0440F86518FE3C3F002F6E33 /* Vehicle */,
 				0440F85C18FE301A002F6E33 /* Insurance */,
 				0469CC6418F67E01008B9691 /* DriversLicense */,
 				04DFE31C18EA063100F8D5B4 /* DLAHomeViewController.h */,
 				04DFE31D18EA063100F8D5B4 /* DLAHomeViewController.m */,
-				D90DAFB018FF15F600EEC52A /* DLAAccidentFlowViewController.h */,
-				D90DAFB118FF15F600EEC52A /* DLAAccidentFlowViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2939D9B9191C2D4C001162AD /* Accidents */ = {
+			isa = PBXGroup;
+			children = (
+				D90DAFB018FF15F600EEC52A /* DLAAccidentFlowViewController.h */,
+				D90DAFB118FF15F600EEC52A /* DLAAccidentFlowViewController.m */,
+				04983ED7191AD9CB0050AB79 /* DLAAccidentInputViewController.h */,
+				04983ED8191AD9CB0050AB79 /* DLAAccidentInputViewController.m */,
+				2939D9BA191C2D90001162AD /* DLAAccidentDocumentsViewController.h */,
+				2939D9BB191C2D91001162AD /* DLAAccidentDocumentsViewController.m */,
+				2939D9C7191C7479001162AD /* DLAAccidentDetailsViewController.h */,
+				2939D9C8191C7479001162AD /* DLAAccidentDetailsViewController.m */,
+			);
+			name = Accidents;
 			sourceTree = "<group>";
 		};
 		299CE7BF18FBB298000BF61E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2939D9BF191C5356001162AD /* accident-documents.png */,
+				2939D9C0191C5356001162AD /* driver-documents.png */,
+				2939D9C1191C5356001162AD /* accident-documents@2x.png */,
+				2939D9C2191C5356001162AD /* driver-documents@2x.png */,
 				299CE7DE18FBCFB1000BF61E /* lines.png */,
 				299CE7DF18FBCFB1000BF61E /* lines@2x.png */,
 				299CE7DA18FBCBAA000BF61E /* map.png */,
@@ -337,6 +372,7 @@
 		D9E870BA18E9F85A00CF64F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2939D9BD191C3F99001162AD /* MessageUI.framework */,
 				D9E870BB18E9F85A00CF64F7 /* Foundation.framework */,
 				D9E870BD18E9F85A00CF64F7 /* CoreGraphics.framework */,
 				D9E870BF18E9F85A00CF64F7 /* UIKit.framework */,
@@ -359,8 +395,6 @@
 				04BC9B3C18F3377800E1A12D /* DLACoreDataStore.m */,
 				D9E870D218E9F85B00CF64F7 /* Images.xcassets */,
 				D9E870CF18E9F85B00CF64F7 /* DriveLA.xcdatamodeld */,
-				04983EDA191AEF8B0050AB79 /* Driver.h */,
-				04983EDB191AEF8B0050AB79 /* Driver.m */,
 				0440F87E19084EB5002F6E33 /* Resources */,
 				D9E870C418E9F85B00CF64F7 /* Supporting Files */,
 			);
@@ -485,13 +519,17 @@
 				299CE7D218FBB2AA000BF61E /* step2@2x.png in Resources */,
 				299CE7E018FBCFB1000BF61E /* lines.png in Resources */,
 				299CE7CC18FBB2AA000BF61E /* cone.png in Resources */,
+				2939D9C3191C5356001162AD /* accident-documents.png in Resources */,
 				299CE7D918FBBB53000BF61E /* yogi.png in Resources */,
 				299CE7CB18FBB2AA000BF61E /* lock@2x.png in Resources */,
 				D9E870C818E9F85B00CF64F7 /* InfoPlist.strings in Resources */,
 				D9E870D318E9F85B00CF64F7 /* Images.xcassets in Resources */,
 				299CE7E118FBCFB1000BF61E /* lines@2x.png in Resources */,
 				299CE7DD18FBCBAA000BF61E /* map@2x.png in Resources */,
+				2939D9C5191C5356001162AD /* accident-documents@2x.png in Resources */,
+				2939D9C4191C5356001162AD /* driver-documents.png in Resources */,
 				0440F88819085746002F6E33 /* CSNotificationView.xcassets in Resources */,
+				2939D9C6191C5356001162AD /* driver-documents@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,12 +556,14 @@
 				D90DAFB218FF15F600EEC52A /* DLAAccidentFlowViewController.m in Sources */,
 				0440F87418FE4037002F6E33 /* DLAVehicleModelViewController.m in Sources */,
 				04BC9B3D18F3377800E1A12D /* DLACoreDataStore.m in Sources */,
+				2939D9BC191C2D91001162AD /* DLAAccidentDocumentsViewController.m in Sources */,
 				0440F87A18FE40F6002F6E33 /* DLAVehicleColorViewController.m in Sources */,
 				0440F88719085746002F6E33 /* CSNotificationView.m in Sources */,
 				0440F86818FE3C5C002F6E33 /* DLAVehicleViewController.m in Sources */,
 				0440F87118FE3FAF002F6E33 /* DLAVehicleMakeViewController.m in Sources */,
 				D9E870CA18E9F85B00CF64F7 /* main.m in Sources */,
 				04983ED619199F430050AB79 /* Accident.m in Sources */,
+				2939D9C9191C7479001162AD /* DLAAccidentDetailsViewController.m in Sources */,
 				04295FF518F6673D005122CC /* DLAPhoneInputViewController.m in Sources */,
 				0406227918ECABC600FA411C /* DLADriversLicenseViewController.m in Sources */,
 				04983EDC191AEF8B0050AB79 /* Driver.m in Sources */,

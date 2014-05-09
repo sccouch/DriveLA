@@ -9,8 +9,12 @@
 #import "DLAHomeViewController.h"
 
 @interface DLAHomeViewController ()
-
+@property (weak, nonatomic) IBOutlet UILabel *driverDocumentsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *driverDocumentsDetailsLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *driverDocumentsImage;
 @end
+
+NSInteger cellCount = 3;
 
 @implementation DLAHomeViewController
 
@@ -36,6 +40,13 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    [self.tableView reloadData];
+}
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -44,15 +55,75 @@
 
 #pragma mark - Table view data source
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    Driver *driver = [[DLACoreDataStore sharedStore] fetchDriver];
+    if (driver.allDocumentsAdded && !driver.accidents) {
+        UITableViewCell *driverDocumentsCell = [super tableView:tableView cellForRowAtIndexPath:0];
+        UIColor *green = [UIColor colorWithRed:80/255.0 green:154/255.0 blue:113/255.0 alpha:1.0];
+        [driverDocumentsCell setBackgroundColor:green];
+        [self.driverDocumentsImage setImage: [UIImage imageNamed:@"driver-documents.png"]];
+        
+        CGRect frame = self.driverDocumentsLabel.frame;
+        frame.origin.y=15;
+        frame.origin.x= 105;
+        self.driverDocumentsLabel.frame= frame;
+        
+        self.driverDocumentsLabel.numberOfLines = 3;
+        [self.driverDocumentsLabel sizeToFit];
+        self.driverDocumentsLabel.text = @"You’re prepared!\nWe have organized\nyour driver documents.";
+        self.driverDocumentsDetailsLabel.text = @"Click to view or edit your documents";
+    }
+    if (driver.accidents) {
+        if (indexPath.row == 1  && indexPath.section == 0)
+            return 78.0;
+        if (indexPath.row == 0 && indexPath.section == 0)
+            return 78.0;
+        
+        CGRect frame = self.driverDocumentsLabel.frame;
+        frame.origin.y=3;
+        frame.origin.x= 105;
+        self.driverDocumentsLabel.frame= frame;
+        
+        self.driverDocumentsLabel.text = @"My Driver Documents";
+        [self.driverDocumentsImage setImage: [UIImage imageNamed:@"driver-documents.png"]];
+        UITableViewCell *driverDocumentsCell = [super tableView:tableView cellForRowAtIndexPath:0];
+        UIColor *lightBlue = [UIColor colorWithRed:112/255.0 green:180/255.0 blue:192/255.0 alpha:1.0];
+        [driverDocumentsCell setBackgroundColor:lightBlue];
+        
+    }
+    else {
+        [self.driverDocumentsLabel sizeToFit];
+        if (indexPath.row == 0 && indexPath.section == 0)
+            return 156.0;
+        else if (indexPath.row == 1 && indexPath.section == 0)
+            return 0.0;
+    }
+    
+    return 105.0;
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {    // Return the number of rows in the section.
-    return 0;
+
+     return 4;
+
+}
+
+- (void)addAccidentsCell
+{
+    NSMutableArray *indexPaths = [[NSMutableArray alloc] init];
+    NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:0];
+    [indexPaths addObject:path];
+    cellCount= cellCount+1;
+    [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationRight];
 }
 
 /*

@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *cityTextField;
 @property (weak, nonatomic) IBOutlet UITextField *stateTextField;
 @property (weak, nonatomic) IBOutlet UITextField *zipcodeTextField;
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *insuranceCompanyTextField;
 @property (weak, nonatomic) IBOutlet UITextField *policyNumberTextField;
 @property (weak, nonatomic) IBOutlet UITextField *insurancePhoneTextField;
@@ -52,6 +53,7 @@
     self.cityTextField.delegate = self;
     self.stateTextField.delegate = self;
     self.zipcodeTextField.delegate = self;
+    self.emailTextField.delegate = self;
     self.insuranceCompanyTextField.delegate = self;
     self.policyNumberTextField.delegate = self;
     self.insurancePhoneTextField.delegate = self;
@@ -81,6 +83,8 @@
     else if (textField == self.stateTextField)
         [self.zipcodeTextField becomeFirstResponder];
     else if (textField == self.zipcodeTextField)
+        [self.emailTextField becomeFirstResponder];
+    else if (textField == self.emailTextField)
         [self.insuranceCompanyTextField becomeFirstResponder];
     else if (textField == self.insuranceCompanyTextField)
         [self.policyNumberTextField becomeFirstResponder];
@@ -108,8 +112,12 @@
                                               otherButtonTitles:@"That's OK", nil];
         [alert show];
     }
-    else
+    else {
         [self saveAccident];
+        //[self.navigationController setDelegate:self];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
+    
     
 }
 
@@ -122,6 +130,7 @@
     accident.city = self.cityTextField.text;
     accident.state = self.stateTextField.text;
     accident.zipcode = self.zipcodeTextField.text;
+    accident.email = self.emailTextField.text;
     accident.driverPhone = self.driverPhoneTextField.text;
     accident.insuranceCompany = self.insuranceCompanyTextField.text;
     accident.policyNumber = self.policyNumberTextField.text;
@@ -129,6 +138,14 @@
     accident.make = self.makeTextField.text;
     accident.model = self.modelTextField.text;
     accident.plateNumber = self.licensePlateTextField.text;
+    
+    
+    NSDateFormatter *dateformate=[[NSDateFormatter alloc]init];
+    
+    [dateformate setDateFormat:@"MM/dd/YYYY"];
+    
+    NSString *dateString=[dateformate stringFromDate:[NSDate date]];
+    accident.date = dateString;
     
     Driver *driver = [[DLACoreDataStore sharedStore] fetchDriver];
     
@@ -152,6 +169,7 @@
         [self.cityTextField.text isEqualToString:@""] ||
         [self.stateTextField.text isEqualToString:@""] ||
         [self.zipcodeTextField.text isEqualToString:@""] ||
+        [self.emailTextField.text isEqualToString:@""] ||
         [self.driverPhoneTextField.text isEqualToString:@""] ||
         [self.insuranceCompanyTextField.text isEqualToString:@""] ||
         [self.policyNumberTextField.text isEqualToString:@""] ||
@@ -163,8 +181,10 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     
-    if (buttonIndex == 1)
+    if (buttonIndex == 1) {
         [self saveAccident];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
     
 }
 
@@ -259,7 +279,7 @@
 {
     // Return the number of rows in the section.
     if (section == 0)
-        return 4;
+        return 5;
     else
         return 3;
 }

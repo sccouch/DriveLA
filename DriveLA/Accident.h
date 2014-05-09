@@ -15,6 +15,7 @@
 @property NSString *city;
 @property NSString *state;
 @property NSString *zipcode;
+@property NSString *email;
 @property NSString *driverPhone;
 @property NSString *insuranceCompany;
 @property NSString *policyNumber;
@@ -22,5 +23,7 @@
 @property NSString *model;
 @property NSString *plateNumber;
 @property NSString *insurancePhone;
+
+@property NSString *date;
 
 @end

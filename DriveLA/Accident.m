@@ -22,6 +22,7 @@
     self.city = [decoder decodeObjectForKey:@"city"];
     self.state = [decoder decodeObjectForKey:@"state"];
     self.zipcode = [decoder decodeObjectForKey:@"zipcode"];
+    self.email = [decoder decodeObjectForKey:@"email"];
     self.driverPhone = [decoder decodeObjectForKey:@"driverPhone"];
     self.insuranceCompany = [decoder decodeObjectForKey:@"insuranceCompany"];
     self.policyNumber = [decoder decodeObjectForKey:@"policyNumber"];
@@ -29,6 +30,8 @@
     self.model = [decoder decodeObjectForKey:@"model"];
     self.plateNumber = [decoder decodeObjectForKey:@"plateNumber"];
     self.insurancePhone = [decoder decodeObjectForKey:@"insurancePhone"];
+    
+    self.date = [decoder decodeObjectForKey:@"date"];
     
     return self;
 }
@@ -40,6 +43,7 @@
     [encoder encodeObject:self.city forKey:@"city"];
     [encoder encodeObject:self.state forKey:@"state"];
     [encoder encodeObject:self.zipcode forKey:@"zipcode"];
+    [encoder encodeObject:self.email forKey:@"email"];
     [encoder encodeObject:self.driverPhone forKey:@"driverPhone"];
     [encoder encodeObject:self.insuranceCompany forKey:@"insuranceCompany"];
     [encoder encodeObject:self.policyNumber forKey:@"policyNumber"];
@@ -47,6 +51,8 @@
     [encoder encodeObject:self.model forKey:@"model"];
     [encoder encodeObject:self.plateNumber forKey:@"plateNumber"];
     [encoder encodeObject:self.insurancePhone forKey:@"insurancePhone"];
+    
+    [encoder encodeObject:self.date forKey:@"date"];
     
 }
 

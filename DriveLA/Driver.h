@@ -36,5 +36,9 @@
 
 - (NSString *) getFullName;
 - (NSString *) getAddress;
+- (BOOL) driversLicenseAdded;
+- (BOOL) insuranceInfoAdded;
+- (BOOL) vehicleInfoAdded;
+- (BOOL) allDocumentsAdded;
 
 @end

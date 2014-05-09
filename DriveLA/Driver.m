@@ -65,4 +65,50 @@
     return address;
 }
 
+- (BOOL) driversLicenseAdded {
+    if (self.addressCity &&
+        self.addressState &&
+        self.addressStreet &&
+        self.addressZipcode &&
+        self.driversLicenseExpirationDate &&
+        self.driversLicenseNumber &&
+        self.email &&
+        self.firstName &&
+        self.lastName &&
+        self.phone)
+        return YES;
+    else
+        return NO;
+
+}
+
+- (BOOL) insuranceInfoAdded {
+    if (self.insuranceCompany &&
+        self.insurancePhone &&
+        self.insurancePolicyNumber)
+        return YES;
+    else
+        return NO;
+    
+}
+
+- (BOOL) vehicleInfoAdded {
+    if (self.vehicleColor &&
+        self.vehicleMake &&
+        self.vehicleModel &&
+        self.vehicleYear)
+        return YES;
+    else
+        return NO;
+    
+}
+
+- (BOOL) allDocumentsAdded {
+    
+    if (self.vehicleInfoAdded && self.driversLicenseAdded && self.insuranceInfoAdded)
+        return YES;
+    else
+        return NO;
+}
+
 @end
