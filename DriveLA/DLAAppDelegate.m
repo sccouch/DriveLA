@@ -25,7 +25,6 @@
     
     UIColor *navBarColor = [UIColor colorWithRed:45/255.0 green:49/255.0 blue:59/255.0 alpha:1.0];
     [[UINavigationBar appearance] setBarTintColor:navBarColor];
-    [[UINavigationBar appearance] setTranslucent:NO];
     
     return YES;
 }

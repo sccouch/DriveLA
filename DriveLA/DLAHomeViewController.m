@@ -35,6 +35,16 @@ NSInteger cellCount = 3;
     [super viewDidLoad];
     [self.tableView setSeparatorInset:UIEdgeInsetsZero];
     
+    UIColor *navBarColor = [UIColor colorWithRed:45/255.0 green:49/255.0 blue:59/255.0 alpha:1.0];
+    
+    NSArray *ver = [[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."];
+    if ([[ver objectAtIndex:0] intValue] >= 7) {
+        self.navigationController.navigationBar.barTintColor = navBarColor;
+        self.navigationController.navigationBar.translucent = NO;
+    }else {
+        self.navigationController.navigationBar.tintColor = navBarColor;
+    }
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -67,7 +77,7 @@ NSInteger cellCount = 3;
         [driverDocumentsCell setBackgroundColor:green];
         [self.driverDocumentsImage setImage: [UIImage imageNamed:@"driver-documents.png"]];
         
-        NSIndexPath *path = [NSIndexPath indexPathWithIndex:1];
+        NSIndexPath *path = [NSIndexPath indexPathForRow:1 inSection:0];
         UITableViewCell *accidentDocumentsCell = [super tableView:tableView cellForRowAtIndexPath:path];
         accidentDocumentsCell.accessoryType = UITableViewCellAccessoryNone;
         
@@ -92,7 +102,7 @@ NSInteger cellCount = 3;
         self.accidentDocumentsLabel.hidden = NO;
         self.accidentDocumentsImage.hidden = NO;
         
-        NSIndexPath *path = [NSIndexPath indexPathWithIndex:1];
+        NSIndexPath *path = [NSIndexPath indexPathForRow:1 inSection:0];
         UITableViewCell *accidentDocumentsCell = [super tableView:tableView cellForRowAtIndexPath:path];
         accidentDocumentsCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         
@@ -111,7 +121,7 @@ NSInteger cellCount = 3;
     }
     else {
         [self.driverDocumentsLabel sizeToFit];
-        NSIndexPath *path = [NSIndexPath indexPathWithIndex:1];
+        NSIndexPath *path = [NSIndexPath indexPathForRow:1 inSection:0];
         UITableViewCell *accidentDocumentsCell = [super tableView:tableView cellForRowAtIndexPath:path];
         accidentDocumentsCell.accessoryType = UITableViewCellAccessoryNone;
         self.accidentDocumentsLabel.hidden = YES;
