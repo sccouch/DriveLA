@@ -12,6 +12,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *driverDocumentsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *driverDocumentsDetailsLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *driverDocumentsImage;
+@property (weak, nonatomic) IBOutlet UILabel *accidentDocumentsLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *accidentDocumentsImage;
 @end
 
 NSInteger cellCount = 3;
@@ -74,12 +76,17 @@ NSInteger cellCount = 3;
         [self.driverDocumentsLabel sizeToFit];
         self.driverDocumentsLabel.text = @"You’re prepared!\nWe have organized\nyour driver documents.";
         self.driverDocumentsDetailsLabel.text = @"Click to view or edit your documents";
+        self.accidentDocumentsLabel.hidden = YES;
+        self.accidentDocumentsImage.hidden = YES;
     }
     if (driver.accidents) {
         if (indexPath.row == 1  && indexPath.section == 0)
             return 78.0;
         if (indexPath.row == 0 && indexPath.section == 0)
             return 78.0;
+        
+        self.accidentDocumentsLabel.hidden = NO;
+        self.accidentDocumentsImage.hidden = NO;
         
         CGRect frame = self.driverDocumentsLabel.frame;
         frame.origin.y=3;
@@ -91,10 +98,13 @@ NSInteger cellCount = 3;
         UITableViewCell *driverDocumentsCell = [super tableView:tableView cellForRowAtIndexPath:0];
         UIColor *lightBlue = [UIColor colorWithRed:112/255.0 green:180/255.0 blue:192/255.0 alpha:1.0];
         [driverDocumentsCell setBackgroundColor:lightBlue];
+        self.driverDocumentsDetailsLabel.hidden = YES;
         
     }
     else {
         [self.driverDocumentsLabel sizeToFit];
+        self.accidentDocumentsLabel.hidden = YES;
+        self.accidentDocumentsImage.hidden = YES;
         if (indexPath.row == 0 && indexPath.section == 0)
             return 156.0;
         else if (indexPath.row == 1 && indexPath.section == 0)

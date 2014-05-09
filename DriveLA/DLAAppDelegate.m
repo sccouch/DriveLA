@@ -22,6 +22,10 @@
        NSFontAttributeName:[UIFont fontWithName:@"Avenir-Roman" size:14.0]
        }
       forState:UIControlStateNormal];
+    
+    UIColor *navBarColor = [UIColor colorWithRed:45/255.0 green:49/255.0 blue:59/255.0 alpha:1.0];
+    [[UINavigationBar appearance] setBarTintColor:navBarColor];
+    
     return YES;
 }
 
