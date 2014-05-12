@@ -23,6 +23,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *makeTextField;
 @property (weak, nonatomic) IBOutlet UITextField *modelTextField;
 @property (weak, nonatomic) IBOutlet UITextField *licensePlateTextField;
+@property (weak, nonatomic) IBOutlet UITextField *crossStreetsTextField;
+@property (weak, nonatomic) IBOutlet UITextView *accidentDetailsTextView;
 
 @end
 
@@ -40,6 +42,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.accidentDetailsTextView.textColor = [UIColor lightGrayColor];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -60,6 +64,8 @@
     self.makeTextField.delegate = self;
     self.modelTextField.delegate = self;
     self.licensePlateTextField.delegate = self;
+    self.crossStreetsTextField.delegate = self;
+    self.accidentDetailsTextView.delegate = self;
     
 
 }
@@ -68,6 +74,24 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    if ([textView.text isEqualToString:@"Accident Details"]) {
+        textView.text = @"";
+        textView.textColor = [UIColor blackColor]; //optional
+    }
+    [textView becomeFirstResponder];
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    if ([textView.text isEqualToString:@""]) {
+        textView.text = @"Accident Details";
+        textView.textColor = [UIColor lightGrayColor]; //optional
+    }
+    [textView resignFirstResponder];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -98,6 +122,10 @@
         [self.licensePlateTextField becomeFirstResponder];
     else if (textField == self.licensePlateTextField)
         [self.nameTextField becomeFirstResponder];
+    else if (textField == self.nameTextField)
+        [self.crossStreetsTextField becomeFirstResponder];
+    else if (textField == self.crossStreetsTextField)
+        [self.accidentDetailsTextView becomeFirstResponder];
     
     return YES;
 }
@@ -138,6 +166,8 @@
     accident.make = self.makeTextField.text;
     accident.model = self.modelTextField.text;
     accident.plateNumber = self.licensePlateTextField.text;
+    accident.crossStreets = self.crossStreetsTextField.text;
+    accident.accidentDetails = self.accidentDetailsTextView.text;
     
     
     NSDateFormatter *dateformate=[[NSDateFormatter alloc]init];
@@ -176,7 +206,9 @@
         [self.insurancePhoneTextField.text isEqualToString:@""] ||
         [self.makeTextField.text isEqualToString:@""] ||
         [self.modelTextField.text isEqualToString:@""] ||
-        [self.licensePlateTextField.text isEqualToString:@""];
+    [self.licensePlateTextField.text isEqualToString:@""]||
+    [self.crossStreetsTextField.text isEqualToString:@""]||
+    [self.accidentDetailsTextView.text isEqualToString:@"Accident Details"];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
@@ -272,7 +304,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 3;
+    return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -280,6 +312,8 @@
     // Return the number of rows in the section.
     if (section == 0)
         return 5;
+    else if (section == 3)
+        return 2;
     else
         return 3;
 }

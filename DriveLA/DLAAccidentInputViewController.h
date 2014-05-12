@@ -10,6 +10,6 @@
 #import "Accident.h"
 #import "DLACoreDataStore.h"
 
-@interface DLAAccidentInputViewController : UITableViewController <UITextFieldDelegate, UIAlertViewDelegate>
+@interface DLAAccidentInputViewController : UITableViewController <UITextFieldDelegate, UIAlertViewDelegate, UITextViewDelegate>
 
 @end

@@ -30,6 +30,9 @@
     self.model = [decoder decodeObjectForKey:@"model"];
     self.plateNumber = [decoder decodeObjectForKey:@"plateNumber"];
     self.insurancePhone = [decoder decodeObjectForKey:@"insurancePhone"];
+    self.crossStreets = [decoder decodeObjectForKey:@"crossStreets"];
+    self.accidentDetails = [decoder decodeObjectForKey:@"accidentDetails"];
+
     
     self.date = [decoder decodeObjectForKey:@"date"];
     
@@ -51,6 +54,9 @@
     [encoder encodeObject:self.model forKey:@"model"];
     [encoder encodeObject:self.plateNumber forKey:@"plateNumber"];
     [encoder encodeObject:self.insurancePhone forKey:@"insurancePhone"];
+    [encoder encodeObject:self.crossStreets forKey:@"crossStreets"];
+    [encoder encodeObject:self.accidentDetails forKey:@"accidentDetails"];
+
     
     [encoder encodeObject:self.date forKey:@"date"];
     

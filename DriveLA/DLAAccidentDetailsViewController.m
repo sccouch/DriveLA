@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *driverInfoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *myInfoLabel;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UILabel *accidentDetailsLabel;
 
 @end
 
@@ -30,7 +31,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.scrollView.contentSize = CGSizeMake(320, 800);
+    self.scrollView.contentSize = CGSizeMake(320, 1000);
     
     Driver *driver = [[DLACoreDataStore sharedStore] fetchDriver];
     NSMutableArray *accidents = [NSKeyedUnarchiver unarchiveObjectWithData: driver.accidents];
@@ -44,12 +45,18 @@
     NSString *otherDriverInformation = [[NSString alloc] init];
     otherDriverInformation = [NSString stringWithFormat:@"Other Driver's Information\nName: %@\nAddress: %@\nPhone: %@\n\nInsurance Company: %@\nInsurance Policy Number: %@\nInsurance Company Phone Number: %@\n\nVehicle Make: %@\nVehicle Model: %@\nLicense Plate Number: %@\n", accident.name, accident.streetAddress, accident.driverPhone, accident.insuranceCompany, accident.policyNumber, accident.insurancePhone, accident.make, accident.model, accident.plateNumber];
     
+    NSString *accidentDetails = [[NSString alloc] init];
+    accidentDetails = [NSString stringWithFormat:@"Accident Details\nCross Streets: %@\nDetails: %@\n", accident.crossStreets, accident.accidentDetails];
+    
     
     self.driverInfoLabel.text = otherDriverInformation;
     [self.driverInfoLabel sizeToFit];
     
     self.myInfoLabel.text = myInformation;
     [self.myInfoLabel sizeToFit];
+    
+    self.accidentDetailsLabel.text = accidentDetails;
+    [self.accidentDetailsLabel sizeToFit];
 }
 
 - (IBAction)emailButtonPressed:(id)sender {
@@ -69,8 +76,11 @@
     NSString *otherDriverInformation = [[NSString alloc] init];
     otherDriverInformation = [NSString stringWithFormat:@"Other Driver's Information\nName: %@\nAddress: %@\nPhone: %@\n\nInsurance Company: %@\nInsurance Policy Number: %@\nInsurance Company Phone Number: %@\n\nVehicle Make: %@\nVehicle Model: %@\nLicense Plate Number: %@\n", accident.name, accident.streetAddress, accident.driverPhone, accident.insuranceCompany, accident.policyNumber, accident.insurancePhone, accident.make, accident.model, accident.plateNumber];
     
+    NSString *accidentDetails = [[NSString alloc] init];
+    accidentDetails = [NSString stringWithFormat:@"Accident Details\nCross Streets: %@\nDetails: %@\n", accident.crossStreets, accident.accidentDetails];
+    
     NSString *message = [[NSString alloc] init];
-    message = [NSString stringWithFormat:@"Accident On: %@\n\n%@\n----------------------------\n\n%@", accident.date,myInformation, otherDriverInformation];
+    message = [NSString stringWithFormat:@"Accident On: %@\n\n%@\n----------------------------\n\n%@\n----------------------------\n\n%@", accident.date,myInformation, otherDriverInformation, accidentDetails];
     
     if([MFMailComposeViewController canSendMail]) {
         MFMailComposeViewController *mailCont = [[MFMailComposeViewController alloc] init];

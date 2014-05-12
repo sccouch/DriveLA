@@ -23,6 +23,8 @@
 @property NSString *model;
 @property NSString *plateNumber;
 @property NSString *insurancePhone;
+@property NSString *crossStreets;
+@property NSString *accidentDetails;
 
 @property NSString *date;
 
